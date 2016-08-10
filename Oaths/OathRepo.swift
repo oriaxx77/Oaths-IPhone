@@ -18,6 +18,14 @@ class OathRepo: NSObject{
         return try action( managedContext: managedContext)
     }
     
+    func getAll() throws -> [Oath]{
+        return try self.doInDb({(ctx) throws -> [Oath] in
+            let fetchRequest = NSFetchRequest(entityName: "Oath")
+            let results = try ctx.executeFetchRequest(fetchRequest)
+            return results as! [Oath]
+        })
+    }
+    
     func createOath(oathString: String) throws -> Oath? {
         
         return try self.doInDb({(ctx) throws -> Oath? in

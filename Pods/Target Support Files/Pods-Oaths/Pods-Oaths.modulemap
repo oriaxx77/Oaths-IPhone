@@ -1,0 +1,6 @@
+framework module Pods_Oaths {
+  umbrella header "Pods-Oaths-umbrella.h"
+
+  export *
+  module * { export * }
+}

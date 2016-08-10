@@ -34,19 +34,15 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(animated: Bool) {
         
         do {
-            try oathRepo.doInDb({(ctx) -> Void in
-                let fetchRequest = NSFetchRequest(entityName: "Oath")
-                let results = try ctx.executeFetchRequest(fetchRequest)
-            self.oaths = results as! [Oath]
-            })
+            try self.oaths = oathRepo.getAll();
         } catch let error as NSError {
-            print( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+            self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
         }
         
     }
 
     // MARK: actions
-    @IBAction func addName(sender: AnyObject) {
+    @IBAction func createNewOath(sender: AnyObject) {
         
         let alert = UIAlertController(title: "New Oath", message: "Add a new oath", preferredStyle: .Alert)
         
@@ -81,7 +77,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
                 tableView.reloadData()
             }
         } catch let error as NSError {
-            print( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+            self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
         }
     }
     
@@ -121,7 +117,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 } )
             } catch let error as NSError {
-                print( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+                self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
             }
 
         })
@@ -136,7 +132,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
                 })
             } catch let error as NSError {
-                print( "Error while increasing resisting temptation \(error), deails:\(error.userInfo)" )
+                self.showErrorDialog( "Error while increasing resisting temptation \(error), deails:\(error.userInfo)" )
             }
         })
         resistTempatationAction.backgroundColor = UIColor.greenColor()
@@ -150,13 +146,18 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
                 })
             } catch let error as NSError {
-                print( "Error while increasing failedTemptation \(error), deails:\(error.userInfo)" )
+                self.showErrorDialog( "Error while increasing failedTemptation \(error), deails:\(error.userInfo)" )
             }
         })
         failTemptationAction.backgroundColor = UIColor.orangeColor()
         return [deleteAction,resistTempatationAction,failTemptationAction]
     }
     
+    func showErrorDialog( message: String ){
+        let alert = UIAlertController(title: "Hey", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
 }
 

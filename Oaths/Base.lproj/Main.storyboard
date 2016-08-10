@@ -147,7 +147,7 @@
                     <navigationItem key="navigationItem" id="6pD-Q3-U5n">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="s8L-PR-9OX">
                             <connections>
-                                <action selector="addName:" destination="BYZ-38-t0r" id="f1J-2n-JqI"/>
+                                <action selector="createNewOath:" destination="BYZ-38-t0r" id="gbD-C4-swK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
