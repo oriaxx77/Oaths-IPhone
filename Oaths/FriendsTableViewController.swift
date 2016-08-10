@@ -17,6 +17,11 @@ class FriendsTableViewController: UITableViewController {
     
     var friends: [(String)] = ["Garfield", "Michael Jackson"]
     
+    // MARK: Event Handlers
+    
+    @IBAction func addNewFriend(sender: UIBarButtonItem) {
+    }
+    
     // MARK: UITableViewController
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -9,14 +9,14 @@
         <!--Friends-->
         <scene sceneID="Dns-yj-kEE">
             <objects>
-                <tableViewController id="e9A-Ac-4Jz" userLabel="Friends" customClass="FriendsTableViewController" customModule="Oaths" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Your Friends" id="e9A-Ac-4Jz" userLabel="Friends" customClass="FriendsTableViewController" customModule="Oaths" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rgl-DQ-VtX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" id="UgL-mH-yOI" customClass="FriendsTableViewCell" customModule="Oaths" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UgL-mH-yOI" id="Rfi-Fn-cii">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -40,12 +40,70 @@
                             <outlet property="delegate" destination="e9A-Ac-4Jz" id="320-T6-z6n"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Friends" id="pEc-dA-pvF"/>
+                    <navigationItem key="navigationItem" title="Your Friends" id="evb-0J-09u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wQA-qT-yIu">
+                            <connections>
+                                <action selector="addNewFriend:" destination="e9A-Ac-4Jz" id="IWz-te-w6d"/>
+                                <segue destination="mVc-GI-xJ2" kind="showDetail" id="5c2-JU-MBz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTc-ep-prV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="-221"/>
+            <point key="canvasLocation" x="762" y="-221"/>
+        </scene>
+        <!--Find Friends Table View Controller-->
+        <scene sceneID="QHr-Hi-WoM">
+            <objects>
+                <tableViewController id="wqj-fn-tvj" customClass="FindFriendsTableViewController" customModule="Oaths" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="odR-Q0-fos">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FindFriendsTableViewCell" id="o7y-7L-um0" customClass="FindFriendsTableViewCell" customModule="Oaths" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7y-7L-um0" id="dpw-v3-KTx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="friendname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSO-uw-q2w">
+                                            <rect key="frame" x="61" y="14" width="87" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="fSO-uw-q2w" id="t48-wo-wyS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wqj-fn-tvj" id="OLx-iq-S93"/>
+                            <outlet property="delegate" destination="wqj-fn-tvj" id="yid-SM-iik"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zx0-0t-vfL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7P7-CA-biM">
+                            <connections>
+                                <action selector="onCancel:" destination="wqj-fn-tvj" id="l9r-U7-y8L"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xPF-5n-eTM">
+                            <connections>
+                                <action selector="onSave:" destination="wqj-fn-tvj" id="zfx-Ne-GJm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnc-Ab-5ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="-353"/>
         </scene>
         <!--Your oaths-->
         <scene sceneID="tne-QT-ifu">
@@ -170,7 +228,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TZ1-ve-pwJ" kind="relationship" relationship="viewControllers" id="Bwe-fB-T6h"/>
-                        <segue destination="e9A-Ac-4Jz" kind="relationship" relationship="viewControllers" id="2Ne-rL-6pc"/>
+                        <segue destination="rp9-fp-95a" kind="relationship" relationship="viewControllers" id="2Ne-rL-6pc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSo-BY-8s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,6 +254,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIC-R5-SLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-988" y="592"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="hn0-es-Gnt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rp9-fp-95a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" id="pEc-dA-pvF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lD1-WO-cPL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e9A-Ac-4Jz" kind="relationship" relationship="rootViewController" id="bft-rn-bs1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u45-cn-NR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="-221"/>
+        </scene>
+        <!--Find Friends-->
+        <scene sceneID="Zcc-8x-557">
+            <objects>
+                <navigationController title="Find Friends" automaticallyAdjustsScrollViewInsets="NO" id="mVc-GI-xJ2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iEA-gk-Nrw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wqj-fn-tvj" kind="relationship" relationship="rootViewController" id="9cB-lV-ehj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urn-hr-oRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="-353"/>
         </scene>
     </scenes>
 </document>
