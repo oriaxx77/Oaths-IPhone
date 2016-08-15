@@ -17,7 +17,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: state
     var oaths = [Oath]()
     
-    var oathRepo = OathRepo()
+    var oathRepo = OathRepository()
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
@@ -101,12 +101,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
         return [deleteAction(),resistTemptationAction(),failTemptationAction()]
     }
     
-    func showErrorDialog( message: String ){
-        let alert = UIAlertController(title: "Hey", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
+        
     
     func resistTemptationAction() -> UITableViewRowAction {
         let resistTempatationAction = UITableViewRowAction(style: .Default, title: "Resisted", handler: {action,idxPath in

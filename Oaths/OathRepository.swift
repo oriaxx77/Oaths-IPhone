@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class OathRepo: GenericRepo<Oath>{
+class OathRepository: GenericRepository<Oath>{
     
     func create(oathString: String) throws -> Oath? {
         let uniquePredicate = NSPredicate( format: "oath == %@", oathString );

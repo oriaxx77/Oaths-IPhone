@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class GenericRepo<T:NSManagedObject>: NSObject{
+class GenericRepository<T:NSManagedObject>: NSObject{
     
     let coreDataAccess: CoreDataAccess
     let entityName: String

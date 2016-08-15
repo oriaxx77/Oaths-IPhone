@@ -15,7 +15,10 @@ import Alamofire
 
 class FriendsTableViewController: UITableViewController {
     
-    var friends: [(String)] = ["Garfield", "Michael Jackson"]
+    var friends = [Friend]()
+    
+    let friendsRepository = FriendRepository()
+    
     
     // MARK: Event Handlers
     
@@ -24,57 +27,16 @@ class FriendsTableViewController: UITableViewController {
     
     // MARK: UITableViewController
     
+    override func viewWillAppear(animated: Bool) {
+        do {
+            friends = try self.friendsRepository.getAll()
+        } catch let error as NSError {
+            self.showErrorDialog( "Error while loading friends \(error), details: \(error.userInfo)")
+        }
+    }
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
-
-        Alamofire.request(.GET,"http://127.0.0.1:8080/person")
-            .responseJSON{ (response) -> Void in
-                
-                guard let value = response.result.value as? [String: AnyObject]
-                else {
-                    print("error")
-                    return
-                }
-                print( "Response: \(value)")
-                
-        } ;
-        
-        
-        
-//        Alamofire.request(
-//            .GET,
-//            "http://127.0.0.1:8080/person",
-//            parameters: ["include_docs": "true"],
-//            encoding: .URL)
-//            .validate()
-//            .responseJSON { (response) -> Void in
-//                guard response.result.isSuccess else {
-//                    print("Error while fetching remote rooms: \(response.result.error)")
-//                    completion(nil)
-//                    return
-//                }
-//                
-//                guard let value = response.result.value as? [String: AnyObject],
-//                    rows = value["rows"] as? [[String: AnyObject]] else {
-//                        print("Malformed data received from fetchAllRooms service")
-//                        completion(nil)
-//                        return
-//                }
-//                
-//                var rooms = [RemoteRoom]()
-//                for roomDict in rows {
-//                    rooms.append(RemoteRoom(jsonData: roomDict))
-//                }
-//                
-//                completion(rooms)
-//        }
-        
-//        do {
-//            
-//        } catch let error as NSError {
-//            print( "Error while loading oaths \(error), deails:\(error.userInfo)" )
-//        }
-        
         return 1
     }
     
@@ -84,7 +46,8 @@ class FriendsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FriendsTableViewCell") as? FriendsTableViewCell
-        cell?.nameLabel.text = friends[indexPath.row]
+        let friend = friends[indexPath.row]
+        cell?.nameLabel.text = "\(friend.firstName) \(friend.surName) (\(friend.email))"
         return cell!;
     }
 }
