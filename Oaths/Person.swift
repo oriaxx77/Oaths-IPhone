@@ -20,9 +20,8 @@ class Person {
     }
     
     init( json: [String:AnyObject] ){
-        print( "json: \(json)" )
-        self.email = "some email"
-        self.firstName = "some firstName"
-        self.surName = "some surName"
+        self.email = json["email"] as! String
+        self.firstName = json["firstName"] as! String
+        self.surName = json["surName"] as! String
     }
 }

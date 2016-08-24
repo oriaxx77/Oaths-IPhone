@@ -4,6 +4,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 pod 'Alamofire'
+pod 'Toast-Swift', '~> 1.2.0'
+pod 'EVReflection'
 
 
 

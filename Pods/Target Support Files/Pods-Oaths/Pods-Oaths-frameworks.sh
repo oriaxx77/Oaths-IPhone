@@ -85,7 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Oaths/Alamofire.framework"
+  install_framework "Pods-Oaths/EVReflection.framework"
+  install_framework "Pods-Oaths/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Oaths/Alamofire.framework"
+  install_framework "Pods-Oaths/EVReflection.framework"
+  install_framework "Pods-Oaths/Toast_Swift.framework"
 fi

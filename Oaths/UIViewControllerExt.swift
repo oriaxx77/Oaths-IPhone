@@ -16,5 +16,9 @@ extension UIViewController{
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    func showToast( message: String ){
+        self.view.makeToast( message, duration: 4.0, position: .Center)
+    }
 
 }

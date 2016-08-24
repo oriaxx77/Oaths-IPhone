@@ -36,8 +36,8 @@ class GenericRepository<T:NSManagedObject>: NSObject{
         try coreDataAccess.save()
     }
     
-    func delete(oath:Oath) throws {
-        try coreDataAccess.delete( oath )
+    func delete( entity:T) throws {
+        try coreDataAccess.delete( entity )
     }
     
     func create( uniquePredicate: NSPredicate, setProperties:((t:T) -> Void)) throws -> T? {

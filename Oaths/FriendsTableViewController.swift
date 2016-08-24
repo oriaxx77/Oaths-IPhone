@@ -30,6 +30,7 @@ class FriendsTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         do {
             friends = try self.friendsRepository.getAll()
+            tableView.reloadData()
         } catch let error as NSError {
             self.showErrorDialog( "Error while loading friends \(error), details: \(error.userInfo)")
         }
@@ -47,7 +48,29 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FriendsTableViewCell") as? FriendsTableViewCell
         let friend = friends[indexPath.row]
-        cell?.nameLabel.text = "\(friend.firstName) \(friend.surName) (\(friend.email))"
+        cell?.nameLabel.text = "\(friend.firstName!) \(friend.surName!)"
+        cell?.emailLabel.text = "\(friend.email!)"
         return cell!;
     }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?{
+        return [deleteAction()]
+    }
+    
+    func deleteAction() -> UITableViewRowAction {
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: {action, indexPath in
+            do {
+                try self.friendsRepository.delete( self.friends[indexPath.row] )
+                self.friends.removeAtIndex( indexPath.row )
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                
+            } catch let error as NSError {
+                self.showErrorDialog( "Error while deleting friend \(error), deails:\(error.userInfo)" )
+            }
+            
+        })
+        return deleteAction
+    }
+    
+    
 }

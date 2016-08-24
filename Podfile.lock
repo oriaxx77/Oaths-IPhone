@@ -1,10 +1,16 @@
 PODS:
   - Alamofire (3.4.1)
+  - EVReflection (2.45.0)
+  - Toast-Swift (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - EVReflection
+  - Toast-Swift (~> 1.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  EVReflection: aa7065b5757b4efd7265cdb17074aeef57c3f981
+  Toast-Swift: 08ae236d49b50dd9b1cea586b9cd7565795f26c2
 
 COCOAPODS: 0.39.0

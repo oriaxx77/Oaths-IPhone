@@ -11,4 +11,5 @@ import UIKit
 class FriendsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
 }

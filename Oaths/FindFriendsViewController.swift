@@ -9,13 +9,28 @@
 import UIKit
 import CoreData
 import Alamofire
+import Toast_Swift
 
 
 
 
-class FindFriendsTableViewController: UITableViewController {
+class FindFriendsTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    // MARK: Services and Components
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    let findFriendService = FindFriendsService()
+
+    let friendRepository = FriendRepository()
+    
+    // MARK: State
     
     var people = [Person]()
+    
+    
+    
+    
     
     // MARK: Event Handlers
     
@@ -24,36 +39,31 @@ class FindFriendsTableViewController: UITableViewController {
     }
     
     
-    @IBAction func onSave(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    
+    
+    // MARK: UISearchResultsUpdating
+    func updateSearchResultsForSearchController(searchController: UISearchController){
+        loadPeopleForSearchText(searchController.searchBar.text!)
     }
     
+    
+    
     // MARK: UITableViewController
-    override func viewWillAppear(animated: Bool) {
-        Alamofire.request(.GET,"http://127.0.0.1:8080/person")
-            .responseJSON{ (response) -> Void in
-                
-                guard response.result.isSuccess else {
-                    print("Error while fetching people from server: \(response.result.error)")
-                    return
-                }
-                
-                guard let value = response.result.value as? [String: AnyObject],
-                rows = value["people"] as? [[String:AnyObject]]else {
-                    print("Malformed people data received from server: \(response.result.value)")
-                    return
-                }
-                
-                
-                self.people = [Person]()
-                for personDict in rows {
-                    self.people.append( Person(json: personDict))
-                }
-                
-                self.tableView.reloadData();
-                
-        } ;
+    override func viewDidLoad() {
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = false;
         
+    }
+    
+    
+    func loadPeopleForSearchText(searchText: String) {
+        findFriendService.loadPeople(filter: searchText, completionHandler: {(people) -> Void in
+                self.people = people
+                self.tableView.reloadData()
+            })
     }
     
     
@@ -68,22 +78,30 @@ class FindFriendsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FindFriendsTableViewCell") as? FindFriendsTableViewCell
         let person = people[indexPath.row]
-        cell?.nameLabel.text = "\(person.firstName) \(person.surName) (\(person.email))"
+        cell?.nameLabel.text = "\(person.firstName) \(person.surName)"
+        cell?.emailLabel.text = "(\(person.email))"
         return cell!;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = tableView.cellForRowAtIndexPath( indexPath ) {
-            if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
-                cell.accessoryType = UITableViewCellAccessoryType.None
-            }
-            else {
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-            }
-        }
+    
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?{
+        return [addFriendAction()]
     }
     
-    // MARK: Actions
+    func addFriendAction() -> UITableViewRowAction {
+        let addFriendAction = UITableViewRowAction(style: .Default, title: "Add", handler: {action, indexPath in
+            do {
+                try self.friendRepository.create( fromPerson: self.people[indexPath.row])
+                self.people.removeAtIndex(indexPath.row)
+                self.tableView.deleteRowsAtIndexPaths([indexPath],  withRowAnimation: .Automatic)
+                self.showToast( "Friend added" )
+            } catch let error as NSError {
+                self.showErrorDialog( "Error while adding new friend \(error), details:\(error.userInfo)" )
+            }
+        })
+        return addFriendAction
+    }
     
     
 }

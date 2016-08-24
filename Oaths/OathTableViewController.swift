@@ -101,7 +101,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
         return [deleteAction(),resistTemptationAction(),failTemptationAction()]
     }
     
-        
+    
     
     func resistTemptationAction() -> UITableViewRowAction {
         let resistTempatationAction = UITableViewRowAction(style: .Default, title: "Resisted", handler: {action,idxPath in
@@ -142,7 +142,7 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 
             } catch let error as NSError {
-                self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+                self.showErrorDialog( "Error while deleting oath \(error), deails:\(error.userInfo)" )
             }
             
         })
