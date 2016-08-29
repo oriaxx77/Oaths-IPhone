@@ -12,9 +12,15 @@ import CoreData
 
 class CoreDataAccess {
     
-    func doInDb<R>( action:((managedContext: NSManagedObjectContext) throws -> R)) throws -> R{
+    func doInDb<R>(
+        
+        action:   ((managedContext: NSManagedObjectContext) throws -> R)
+        
+        ) throws -> R
+    {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
+        
         return try action( managedContext: managedContext)
     }
     

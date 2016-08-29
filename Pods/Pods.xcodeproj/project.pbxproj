@@ -10,23 +10,56 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>00364CD459C34F1F0E1441E3F78965CB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E5F784B07B6D412550280711AD2CC652</string>
+				<string>68BC1852D04C23031FD564143B8DBBCC</string>
+				<string>E6859A9E0D7F8C1301A3BA198B2B9392</string>
+				<string>21195170577E1CAB400205813D60FEBD</string>
+				<string>36D75FAF0A5DD7D1017830EE68C28671</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>019D442CB31031E62CA7C16B3057EF7F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D26862D3CED90E9366BAAD4F4C40F84E</string>
+			<string>CCF7238F9E9D663BDF55161FB162AA34</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>0274EBD8C4D985B9C7636073637EBED4</key>
+		<key>0205843244B3C34452C90CD92A799E38</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>3315A9C2D91E400AE9F171F0DD2AFC9C</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>02CF9CAE517BA9746C8FC560462B9E9E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8202A9810C2915A40D0EFB91F5FC58F5</string>
+				<string>C001878468189F41D48EB634EBBE4C5D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Toast-Swift</string>
 			<key>path</key>
-			<string>EVReflection.xcconfig</string>
+			<string>Toast-Swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -40,6 +73,21 @@
 			<string>text</string>
 			<key>path</key>
 			<string>Pods-OathsTests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0606BB8AD66C7C494956B4499D6100D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Alamofire.swift</string>
+			<key>path</key>
+			<string>Source/Alamofire.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -64,21 +112,6 @@
 			<string>Pods</string>
 			<key>path</key>
 			<string>Target Support Files/Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0757359FA1D833C22CC479B6077B6412</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ResponseSerialization.swift</string>
-			<key>path</key>
-			<string>Source/ResponseSerialization.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -135,14 +168,53 @@
 		<key>095406039B4D371E48D08B38A2975AC8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4767211CAED94B50B46121EAA4D5D18B</string>
+			<string>36017FB4E7C3419ACB63EE4014EA33B9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>0A985DCE972AF76A7866332EFFCDAD3C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EVReflection-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0BD35A5A8CEDE0024219375314F14739</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C0F66FA65A0FB49248249EF64B3CE10</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Alamofire-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0CDBDCDF1E77D6F0494B3EEA2C879DB2</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>0274EBD8C4D985B9C7636073637EBED4</string>
+			<string>19EFC89E9650BE2841AD4212AEE8F58C</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -194,6 +266,31 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>0EE565043F16FC53D25B03FBC0ACD10D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A5FDE3BF9D07E5B561C63A8DD4F66D00</string>
+				<string>9484664E96382C25795FCE990233BC3A</string>
+				<string>701B0380B064164C615A57F5328BA97D</string>
+				<string>B9E479D4D56C26FA1D53F1224BF64F73</string>
+				<string>34C5EC7D973536E1317AC13AE201D8B1</string>
+				<string>9B4126806B0AFF4BFB8B3125159A72BD</string>
+				<string>EA1230DACD661E90BFFFA548AB821C5B</string>
+				<string>2A11EDAA4F5BC3B4AA67276D2467DDDC</string>
+				<string>BC4BA65518CFDBAE093F05E67D8DA571</string>
+				<string>A8E27A8DC55860FA37EF93AE5C349EEA</string>
+				<string>2E2D19316F9544FA5AAE3E7CA3461BD6</string>
+				<string>FF23C6ABFF5B6B0A91348618BF354BC5</string>
+				<string>02CF9CAE517BA9746C8FC560462B9E9E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0EEEE0541291E6D8C2F2AF9607DF6D2C</key>
 		<dict>
@@ -252,21 +349,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>119BF04B3F2E1F40F63E62619770B26A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Upload.swift</string>
-			<key>path</key>
-			<string>Source/Upload.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>11A17EBBFCA4DD63912FB57FF47514E8</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -293,53 +375,10 @@
 			<key>remoteInfo</key>
 			<string>Alamofire</string>
 		</dict>
-		<key>1424BDC21A1C5EE11156185133A67D5A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>777AC350487F3ECD0A3793B077BCC055</string>
-				<string>BC6D14F785BD39CC4D28A4472E324E0F</string>
-				<string>40A85D453091D6BC03738CFCEDCD5C3D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1582FF340F6336707FFAAB5F15DACF70</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Alamofire.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15E80819B45E63D65C5DF6AF7448F3CB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>MultipartFormData.swift</string>
-			<key>path</key>
-			<string>Source/MultipartFormData.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>16102E4E35FAA0FC4161282FECE56469</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E7BA0D557D532549F2EEF62060E030B7</string>
+			<string>F210E1DF8E8C8A91D529040294D22F20</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -356,19 +395,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>17E8B35F3BB92A8AA836A2EBE8CFB88A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>EVReflection-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>180C72216C33968A06ABC829F8544978</key>
 		<dict>
 			<key>fileRef</key>
@@ -376,20 +402,7 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>1978B23B965504CD5F68E612F0A16A48</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1B2DC8EAA3620DBAFB36D550ED967751</key>
+		<key>19EFC89E9650BE2841AD4212AEE8F58C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -398,7 +411,7 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Toast-Swift.xcconfig</string>
+			<string>EVReflection.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -418,7 +431,7 @@
 		<key>1CCD660B55359654EB7E5F30955EC2CD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>17E8B35F3BB92A8AA836A2EBE8CFB88A</string>
+			<string>6066AE97A37ECF3FBE20CFD87D648EDE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -432,6 +445,21 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-OathsTests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DE6FC3B2525A2AB6E6216D4BD7A7CAF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>NetworkReachabilityManager.swift</string>
+			<key>path</key>
+			<string>Source/NetworkReachabilityManager.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -491,6 +519,21 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
+		<key>21195170577E1CAB400205813D60FEBD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SignIn-Module.h</string>
+			<key>path</key>
+			<string>Headers/ModuleHeaders/SignIn-Module.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>2150F56044CD960CF4FF2F1DD53DE9C7</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -522,6 +565,21 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>23DA90334A346DB3B9F0C568373517BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Result.swift</string>
+			<key>path</key>
+			<string>Source/Result.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -579,18 +637,31 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>2902217F4908534B1E495C1E2742AF6B</key>
+		<key>2A0470D7A1A1C3665F005E516DDE5DB7</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>7D5CD5F6158BD54D7DFD3FC025A345D6</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Response.swift</string>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2A11EDAA4F5BC3B4AA67276D2467DDDC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EF7ED7D34AB7972A2AFB6CCE036C18E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleInterchangeUtilities</string>
 			<key>path</key>
-			<string>Source/Response.swift</string>
+			<string>GoogleInterchangeUtilities</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -639,9 +710,24 @@
 		<key>2D3405986FC586FA6C0A5E0B6BA7E64E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D14211DF5691AD32E36E4E489C8F61B9</string>
+			<string>4FCF88BE9868BA7214BCD5340BE44475</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D7F1B7B6F7D43F50EADD06B76C65334</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Notifications.swift</string>
+			<key>path</key>
+			<string>Source/Notifications.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -656,6 +742,21 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>2E2D19316F9544FA5AAE3E7CA3461BD6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A630FB72A4E16023C9EBEAD8C657DC10</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleSymbolUtilities</string>
+			<key>path</key>
+			<string>GoogleSymbolUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2EAC13082767E52291DF68941A058C07</key>
 		<dict>
@@ -697,33 +798,17 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>315AD5A61B9682ACE5FC5D7A9B1BB700</key>
+		<key>30254B2C34FB94A4064A349B483F4236</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>93D70E512D565730F7F8A11C62F76004</string>
+				<string>42386A6CE4DAACBE73576893884F4872</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>ParameterEncoding.swift</string>
-			<key>path</key>
-			<string>Source/ParameterEncoding.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31AF6F4E06194D86B883434CA3B822A0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Alamofire.swift</string>
-			<key>path</key>
-			<string>Source/Alamofire.swift</string>
+			<string>SignIn</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -739,6 +824,19 @@
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>3315A9C2D91E400AE9F171F0DD2AFC9C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FirebaseAnalytics.framework</string>
+			<key>path</key>
+			<string>Frameworks/frameworks/FirebaseAnalytics.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3388D91CF4A3109A44A2050DB4AB94EB</key>
 		<dict>
@@ -767,6 +865,22 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>34C5EC7D973536E1317AC13AE201D8B1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>00364CD459C34F1F0E1441E3F78965CB</string>
+				<string>30254B2C34FB94A4064A349B483F4236</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Google</string>
+			<key>path</key>
+			<string>Google</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>34CBD33AFBEDFDD07B947734E733E4B9</key>
 		<dict>
 			<key>isa</key>
@@ -781,7 +895,7 @@
 		<key>34CCDCA848A701466256BC2927DA8856</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7A345BCF931AB1AD41780FCC982547C8</string>
+			<string>1DE6FC3B2525A2AB6E6216D4BD7A7CAF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -797,6 +911,34 @@
 			<string>E911919606787018208ACB2AC2056FC0</string>
 			<key>remoteInfo</key>
 			<string>Toast-Swift</string>
+		</dict>
+		<key>36017FB4E7C3419ACB63EE4014EA33B9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Error.swift</string>
+			<key>path</key>
+			<string>Source/Error.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>36D75FAF0A5DD7D1017830EE68C28671</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E4BA8A15BC546098E408A4681851B694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>38E654FBF67BF774F85A26F3F845EF2C</key>
 		<dict>
@@ -883,6 +1025,19 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>3B7B210BEB54D479C6C11DE353F0E112</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC85C073D7818F2CDE445881CE93EB2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>3C77E2DC9C8468CBF214C41146830335</key>
 		<dict>
 			<key>fileRef</key>
@@ -945,43 +1100,16 @@
 		<key>3EA8F215C9C1432D74E5CCA4834AA8C0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0757359FA1D833C22CC479B6077B6412</string>
+			<string>5985204A1CB2B519AE0F1DEC646A0D9A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>3F30EC0B23A196F1326E38509D47A7FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Toast-Swift.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4081EA628AF0B73AC51FFB9D7AB3B89E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8A3F619D1333E57A570D82823C83E554</string>
+			<string>5F2A072E94118DEC612DDDE74C768B9E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>40A85D453091D6BC03738CFCEDCD5C3D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA25DFE2CA664923E6CE74D0643F3605</string>
-				<string>A99B732837F5CB4924480FB796DC5629</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Toast-Swift</string>
-			<key>path</key>
-			<string>Toast-Swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4177A18EE379E4EB3C934F2621570D9A</key>
 		<dict>
@@ -995,6 +1123,19 @@
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>42386A6CE4DAACBE73576893884F4872</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>869B7FBF5A5E8E64261FF4CCF9832757</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>433CD3331B6C3787F473C941B61FC68F</key>
 		<dict>
@@ -1025,18 +1166,47 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4767211CAED94B50B46121EAA4D5D18B</key>
+		<key>4969D1B479451E487D7863AE3075DA23</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Alamofire.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>497A5E152C83AFDC22551A3BA179443F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FFC317010A61A5CDD70720E2958CCC3D</string>
+				<string>19EFC89E9650BE2841AD4212AEE8F58C</string>
+				<string>6066AE97A37ECF3FBE20CFD87D648EDE</string>
+				<string>C848857FCD01265B4706CC40CA280078</string>
+				<string>0A985DCE972AF76A7866332EFFCDAD3C</string>
+				<string>D85395759D32B0C508EC0801A8AB6B0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/EVReflection</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4C4400A6692076322C439857E55387A9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Error.swift</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Source/Error.swift</string>
+			<string>Alamofire.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1116,16 +1286,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4F0395839F8052C638F55D4623A4C821</key>
+		<key>4E572FAED01558F994EDF6589D85DB8D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Download.swift</string>
 			<key>path</key>
-			<string>Alamofire-prefix.pch</string>
+			<string>Source/Download.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1141,6 +1313,21 @@
 			<string>E911919606787018208ACB2AC2056FC0</string>
 			<key>remoteInfo</key>
 			<string>Toast-Swift</string>
+		</dict>
+		<key>4FCF88BE9868BA7214BCD5340BE44475</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Validation.swift</string>
+			<key>path</key>
+			<string>Source/Validation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>501A44B92CF1ABB9A2C56F7A6BA2DA55</key>
 		<dict>
@@ -1267,6 +1454,21 @@
 			<key>remoteInfo</key>
 			<string>Toast-Swift</string>
 		</dict>
+		<key>5772770BB134D0E58B2DDBE3B4F1DE78</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FIRInstanceID.h</string>
+			<key>path</key>
+			<string>Sources/FIRInstanceID.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>58C422F3D40E153651815099FE9CD4FC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1280,7 +1482,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>58D94D3FB243C0866D2AC63893BB8258</key>
+		<key>5985204A1CB2B519AE0F1DEC646A0D9A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1289,30 +1491,56 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>Request.swift</string>
+			<string>ResponseSerialization.swift</string>
 			<key>path</key>
-			<string>Source/Request.swift</string>
+			<string>Source/ResponseSerialization.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5990916127E31F8A8F0ABE9D436728AD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Alamofire-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5994A5AC5A44C32601236C4E0FFE2D7C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CDE8CAB662D8AE2DDB1CB302CD565DDB</string>
+			<string>626483B1A83B8142D2CD0AFD160A1043</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AB3C7B4E2F086F27AA975C5A8727EF8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleNetworkingUtilities.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleNetworkingUtilities.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5BC19E6E0F199276003F0AF96838BCE5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>119BF04B3F2E1F40F63E62619770B26A</string>
+			<string>B4677B8E5E06E3C4A77F2358E7AD1AAD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>5CB05FBCB32D21E194B5ECF680CB6AE0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9770D6AEFFA7042C96B93302AE1226EF</string>
+			<string>4E572FAED01558F994EDF6589D85DB8D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1404,20 +1632,7 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>5E6A7E5D45AB69B1F93706EDB32844D0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Toast-Swift-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5EE88AF2156271D3FD483B7B5717BD2B</key>
+		<key>5F2A072E94118DEC612DDDE74C768B9E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1426,16 +1641,57 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>EVExtensions.swift</string>
+			<string>Manager.swift</string>
 			<key>path</key>
-			<string>EVReflection/pod/EVExtensions.swift</string>
+			<string>Source/Manager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6066AE97A37ECF3FBE20CFD87D648EDE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>EVReflection-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6133A7631A84BAC72DBDC4DD60969BF4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MultipartFormData.swift</string>
+			<key>path</key>
+			<string>Source/MultipartFormData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>626483B1A83B8142D2CD0AFD160A1043</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Toast-Swift-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>62E8346F03C03E7F4D631361F325689E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2902217F4908534B1E495C1E2742AF6B</string>
+			<string>C99BCE9440BD0C7D350AE2E9A88021CD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1449,6 +1705,19 @@
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
 			<string>Pods-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>63F7FBD695B6EE357824089F74DEABCE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleAuthUtilities.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleAuthUtilities.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1516,6 +1785,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>68340A9509A5F6A5FAA3DA9F55CEE0B6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AB3C7B4E2F086F27AA975C5A8727EF8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>68AA8156AF037D43F805D79AFD2D0276</key>
 		<dict>
 			<key>isa</key>
@@ -1527,10 +1809,38 @@
 			<key>targetProxy</key>
 			<string>55D605BEB598DAC073B90073F8D8C210</string>
 		</dict>
+		<key>68BC1852D04C23031FD564143B8DBBCC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Core.h</string>
+			<key>path</key>
+			<string>Headers/Core.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6A02615BBC1C72F69A9BE5F7BBC0580D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9A6980334573AB8D9BAC9E7341016536</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>6A722298865410BADAB82955062EDA5F</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>0274EBD8C4D985B9C7636073637EBED4</string>
+			<string>19EFC89E9650BE2841AD4212AEE8F58C</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1633,25 +1943,51 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>6E85A68E75F29A9FC413EC6A824AC3CC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleSignIn.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleSignIn.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>6FC4ADF261A302A1B80302646DC3A87E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D747C520975FA97CF3B86B97A816477C</string>
+			<string>A128EFAD6D1D828FF256B13471582948</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>729687EF15B683DC13FE852E3BD8313B</key>
+		<key>701B0380B064164C615A57F5328BA97D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0205843244B3C34452C90CD92A799E38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FirebaseAnalytics</string>
+			<key>path</key>
+			<string>FirebaseAnalytics</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72EE263776EC368A65EB0DFCFC622F0D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ServerTrustPolicy.swift</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Source/ServerTrustPolicy.swift</string>
+			<string>Alamofire-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1726,7 +2062,7 @@
 		<key>757CABB4F289EBC540149CBF2C1A95FF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>85CFCD23F3CF696B79C0D8DDF06DBEAC</string>
+			<string>0A985DCE972AF76A7866332EFFCDAD3C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1737,39 +2073,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>777AC350487F3ECD0A3793B077BCC055</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>31AF6F4E06194D86B883434CA3B822A0</string>
-				<string>9770D6AEFFA7042C96B93302AE1226EF</string>
-				<string>4767211CAED94B50B46121EAA4D5D18B</string>
-				<string>8A3F619D1333E57A570D82823C83E554</string>
-				<string>15E80819B45E63D65C5DF6AF7448F3CB</string>
-				<string>7A345BCF931AB1AD41780FCC982547C8</string>
-				<string>9A8BFE1D5798EB84957FECC99793AAF3</string>
-				<string>315AD5A61B9682ACE5FC5D7A9B1BB700</string>
-				<string>58D94D3FB243C0866D2AC63893BB8258</string>
-				<string>2902217F4908534B1E495C1E2742AF6B</string>
-				<string>0757359FA1D833C22CC479B6077B6412</string>
-				<string>77BB263016D2D304AD2157BADD8CA901</string>
-				<string>729687EF15B683DC13FE852E3BD8313B</string>
-				<string>A2DC173CC06C840F4768A534FAE95293</string>
-				<string>E7BA0D557D532549F2EEF62060E030B7</string>
-				<string>119BF04B3F2E1F40F63E62619770B26A</string>
-				<string>D14211DF5691AD32E36E4E489C8F61B9</string>
-				<string>80C1F44E5A38AADAA7569D04CA1E05AA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Alamofire</string>
-			<key>path</key>
-			<string>Alamofire</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77BB263016D2D304AD2157BADD8CA901</key>
+		<key>7740D34CBF974BD31B9119AAC639A0AF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1778,9 +2082,22 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>Result.swift</string>
+			<string>ParameterEncoding.swift</string>
 			<key>path</key>
-			<string>Source/Result.swift</string>
+			<string>Source/ParameterEncoding.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78E280D5EFBE7A5176E8B709B2D058A8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Toast-Swift-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1840,21 +2157,6 @@
 			<key>targetProxy</key>
 			<string>2EDB2EA80AF2FDF52DFF4BF9C7AB6A22</string>
 		</dict>
-		<key>7A345BCF931AB1AD41780FCC982547C8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NetworkReachabilityManager.swift</string>
-			<key>path</key>
-			<string>Source/NetworkReachabilityManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7AD2BF0CC43784CC1DA116A84F832E78</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1871,27 +2173,14 @@
 		<key>7B48852C4D848FA2DA416A98F6425869</key>
 		<dict>
 			<key>fileRef</key>
-			<string>729687EF15B683DC13FE852E3BD8313B</string>
+			<string>A26CC997F26779EF7A7E58921A149AC2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>7BB32C8EDEDE828CCD056F02653CFB6F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>EVReflection-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>7CAA74C7B5B3380A06CE3BFEA8FA2A0C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1B2DC8EAA3620DBAFB36D550ED967751</string>
+			<string>BEA6DE02B347CD157361A472E5C7B390</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1946,13 +2235,26 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>7D5CD5F6158BD54D7DFD3FC025A345D6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FirebaseInstanceID.framework</string>
+			<key>path</key>
+			<string>Frameworks/frameworks/FirebaseInstanceID.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>1424BDC21A1C5EE11156185133A67D5A</string>
+				<string>0EE565043F16FC53D25B03FBC0ACD10D</string>
 				<string>2358CC6A4C741AF28DB604A26B9B3F9D</string>
 				<string>462827E79255889DDCADE24D45821708</string>
 			</array>
@@ -1974,36 +2276,31 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>80C1F44E5A38AADAA7569D04CA1E05AA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>89278867FAECF24590350FAC91708AA3</string>
-				<string>1582FF340F6336707FFAAB5F15DACF70</string>
-				<string>C7009BBFE646B7030DFFCC7404EA7A5A</string>
-				<string>4F0395839F8052C638F55D4623A4C821</string>
-				<string>B7FBBD9A01F52A110AAB7CAA9FF051D4</string>
-				<string>1978B23B965504CD5F68E612F0A16A48</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Alamofire</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>85CFCD23F3CF696B79C0D8DDF06DBEAC</key>
+		<key>8202A9810C2915A40D0EFB91F5FC58F5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Toast.swift</string>
 			<key>path</key>
-			<string>EVReflection-umbrella.h</string>
+			<string>Toast/Toast.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>869B7FBF5A5E8E64261FF4CCF9832757</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GGLSignIn.framework</string>
+			<key>path</key>
+			<string>Frameworks/GGLSignIn.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2017,32 +2314,6 @@
 			<string>E911919606787018208ACB2AC2056FC0</string>
 			<key>targetProxy</key>
 			<string>34F1B570EE7E56AB5121A6A6A45C7342</string>
-		</dict>
-		<key>89278867FAECF24590350FAC91708AA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Alamofire.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A3F619D1333E57A570D82823C83E554</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Manager.swift</string>
-			<key>path</key>
-			<string>Source/Manager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8AE45809F5689A2A2C65FB0ADA122BFE</key>
 		<dict>
@@ -2073,7 +2344,7 @@
 		<key>8D7563421CB3D736181DD7A3A00A3AA0</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1582FF340F6336707FFAAB5F15DACF70</string>
+			<string>4C4400A6692076322C439857E55387A9</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -2141,17 +2412,45 @@
 			<key>remoteInfo</key>
 			<string>EVReflection</string>
 		</dict>
+		<key>8E72007993DC143F17AA1A0F70F7D66B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C3E5EE6392BAD6FDFE6A225380AD40E0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8EB11202167FCDDF1257AAAB1D1FB244</key>
 		<dict>
 			<key>fileRef</key>
-			<string>31AF6F4E06194D86B883434CA3B822A0</string>
+			<string>0606BB8AD66C7C494956B4499D6100D2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>93D70E512D565730F7F8A11C62F76004</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SignIn.h</string>
+			<key>path</key>
+			<string>Headers/SignIn.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9469DF81ECB494E84675969B5E13374C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B7FBBD9A01F52A110AAB7CAA9FF051D4</string>
+			<string>5990916127E31F8A8F0ABE9D436728AD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2161,6 +2460,25 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9484664E96382C25795FCE990233BC3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B8BBB5711C93946D82ADDC420C538B28</string>
+				<string>CCF7238F9E9D663BDF55161FB162AA34</string>
+				<string>BAD4A086B119B589F35AD0EE39ED6032</string>
+				<string>A128EFAD6D1D828FF256B13471582948</string>
+				<string>497A5E152C83AFDC22551A3BA179443F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>EVReflection</string>
+			<key>path</key>
+			<string>EVReflection</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>95CC2C7E06DC188A05DAAEE9CAA555A3</key>
 		<dict>
@@ -2203,18 +2521,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9770D6AEFFA7042C96B93302AE1226EF</key>
+		<key>9770ABD55B42CDF0A63FD37F28D44A71</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>4969D1B479451E487D7863AE3075DA23</string>
+				<string>4C4400A6692076322C439857E55387A9</string>
+				<string>0C0F66FA65A0FB49248249EF64B3CE10</string>
+				<string>72EE263776EC368A65EB0DFCFC622F0D</string>
+				<string>5990916127E31F8A8F0ABE9D436728AD</string>
+				<string>FFA286280B312A2482CC461C9C113F0B</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Download.swift</string>
+			<string>Support Files</string>
 			<key>path</key>
-			<string>Source/Download.swift</string>
+			<string>../Target Support Files/Alamofire</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2302,31 +2625,46 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9A8BFE1D5798EB84957FECC99793AAF3</key>
+		<key>9A6980334573AB8D9BAC9E7341016536</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>wrapper.plug-in</string>
 			<key>name</key>
-			<string>Notifications.swift</string>
+			<string>GoogleSignIn.bundle</string>
 			<key>path</key>
-			<string>Source/Notifications.swift</string>
+			<string>Resources/GoogleSignIn.bundle</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9BED64918EBC8F62E15582B5B12004A6</key>
+		<key>9B4126806B0AFF4BFB8B3125159A72BD</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>8E72007993DC143F17AA1A0F70F7D66B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleAppUtilities</string>
+			<key>path</key>
+			<string>GoogleAppUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC85C073D7818F2CDE445881CE93EB2</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleUtilities.framework</string>
 			<key>path</key>
-			<string>Toast-Swift-umbrella.h</string>
+			<string>Frameworks/GoogleUtilities.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2343,7 +2681,37 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>A2DC173CC06C840F4768A534FAE95293</key>
+		<key>A128EFAD6D1D828FF256B13471582948</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>EVWorkaroundHelpers.swift</string>
+			<key>path</key>
+			<string>EVReflection/pod/EVWorkaroundHelpers.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A26CC997F26779EF7A7E58921A149AC2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ServerTrustPolicy.swift</string>
+			<key>path</key>
+			<string>Source/ServerTrustPolicy.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2EB568369EADC805B383F2A59F769C5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2368,6 +2736,38 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5FDE3BF9D07E5B561C63A8DD4F66D00</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0606BB8AD66C7C494956B4499D6100D2</string>
+				<string>4E572FAED01558F994EDF6589D85DB8D</string>
+				<string>36017FB4E7C3419ACB63EE4014EA33B9</string>
+				<string>5F2A072E94118DEC612DDDE74C768B9E</string>
+				<string>6133A7631A84BAC72DBDC4DD60969BF4</string>
+				<string>1DE6FC3B2525A2AB6E6216D4BD7A7CAF</string>
+				<string>2D7F1B7B6F7D43F50EADD06B76C65334</string>
+				<string>7740D34CBF974BD31B9119AAC639A0AF</string>
+				<string>E6A313C7669153C4908D824E5FD4DEB5</string>
+				<string>C99BCE9440BD0C7D350AE2E9A88021CD</string>
+				<string>5985204A1CB2B519AE0F1DEC646A0D9A</string>
+				<string>23DA90334A346DB3B9F0C568373517BF</string>
+				<string>A26CC997F26779EF7A7E58921A149AC2</string>
+				<string>A2EB568369EADC805B383F2A59F769C5</string>
+				<string>F210E1DF8E8C8A91D529040294D22F20</string>
+				<string>B4677B8E5E06E3C4A77F2358E7AD1AAD</string>
+				<string>4FCF88BE9868BA7214BCD5340BE44475</string>
+				<string>9770ABD55B42CDF0A63FD37F28D44A71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>path</key>
+			<string>Alamofire</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2435,12 +2835,41 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>A630FB72A4E16023C9EBEAD8C657DC10</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B680D3C55DBBBF799021CC55A390EE14</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>A791797362A24D258CD8A10D9065BF64</key>
 		<dict>
 			<key>fileRef</key>
 			<string>258B0C8029B3982F03A30ED9FB271283</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>A8E27A8DC55860FA37EF93AE5C349EEA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D6B1D83A3C46D2E81F6C6CB121617DB1</string>
+				<string>6A02615BBC1C72F69A9BE5F7BBC0580D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleSignIn</string>
+			<key>path</key>
+			<string>GoogleSignIn</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A91131E761D3541A42A18E963E5EA3B8</key>
 		<dict>
@@ -2455,59 +2884,26 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A99B732837F5CB4924480FB796DC5629</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C9D22BAADAFBDB8D41FD648B045B5680</string>
-				<string>3F30EC0B23A196F1326E38509D47A7FC</string>
-				<string>1B2DC8EAA3620DBAFB36D550ED967751</string>
-				<string>CDE8CAB662D8AE2DDB1CB302CD565DDB</string>
-				<string>5E6A7E5D45AB69B1F93706EDB32844D0</string>
-				<string>9BED64918EBC8F62E15582B5B12004A6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Toast-Swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>AA314156AC500125F4078EE968DB14C6</key>
 		<dict>
 			<key>fileRef</key>
-			<string>77BB263016D2D304AD2157BADD8CA901</string>
+			<string>23DA90334A346DB3B9F0C568373517BF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>ADF19C953CE2A7D0B72EC93A81FCCC26</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C7009BBFE646B7030DFFCC7404EA7A5A</string>
+			<string>0C0F66FA65A0FB49248249EF64B3CE10</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>AE4CF87C02C042DF13ED5B21C4FDC1E0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A2DC173CC06C840F4768A534FAE95293</string>
+			<string>A2EB568369EADC805B383F2A59F769C5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>AE81FC1E082D85570DEF7FD3895DB3CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B0888CDAB4248001E2C800A2459E9CC7</key>
 		<dict>
@@ -2576,6 +2972,21 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>B4677B8E5E06E3C4A77F2358E7AD1AAD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Upload.swift</string>
+			<key>path</key>
+			<string>Source/Upload.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B62B1D7C5792B1FD42B60826AECF20B8</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -2589,6 +3000,30 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>B6409B2CC88DA4F4225BB7907DA17938</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Toast-Swift.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B680D3C55DBBBF799021CC55A390EE14</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleSymbolUtilities.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleSymbolUtilities.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B77209253F4B785F2DC9893BA653CF3F</key>
 		<dict>
 			<key>isa</key>
@@ -2599,19 +3034,6 @@
 			<string>E911919606787018208ACB2AC2056FC0</string>
 			<key>targetProxy</key>
 			<string>4F58E945D4714B1FFA14882ADD0FD4B7</string>
-		</dict>
-		<key>B7FBBD9A01F52A110AAB7CAA9FF051D4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Alamofire-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B8443532D5027F37C7069D58A5828D1A</key>
 		<dict>
@@ -2624,7 +3046,7 @@
 			<key>targetProxy</key>
 			<string>5212ABA5260D1CC3ABA0A23711DC09ED</string>
 		</dict>
-		<key>BA25DFE2CA664923E6CE74D0643F3605</key>
+		<key>B8BBB5711C93946D82ADDC420C538B28</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2633,9 +3055,25 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>Toast.swift</string>
+			<string>EVExtensions.swift</string>
 			<key>path</key>
-			<string>Toast/Toast.swift</string>
+			<string>EVReflection/pod/EVExtensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B9E479D4D56C26FA1D53F1224BF64F73</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5772770BB134D0E58B2DDBE3B4F1DE78</string>
+				<string>2A0470D7A1A1C3665F005E516DDE5DB7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FirebaseInstanceID</string>
+			<key>path</key>
+			<string>FirebaseInstanceID</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2669,10 +3107,40 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BAD4A086B119B589F35AD0EE39ED6032</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>EVReflection.swift</string>
+			<key>path</key>
+			<string>EVReflection/pod/EVReflection.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BC4BA65518CFDBAE093F05E67D8DA571</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68340A9509A5F6A5FAA3DA9F55CEE0B6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleNetworkingUtilities</string>
+			<key>path</key>
+			<string>GoogleNetworkingUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BC5D5C254455906479CA7A47D5C6BE04</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9BED64918EBC8F62E15582B5B12004A6</string>
+			<string>78E280D5EFBE7A5176E8B709B2D058A8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2682,25 +3150,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>BC6D14F785BD39CC4D28A4472E324E0F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5EE88AF2156271D3FD483B7B5717BD2B</string>
-				<string>D26862D3CED90E9366BAAD4F4C40F84E</string>
-				<string>FEBCFE3904476C572F5DDE2DF2D8E5C5</string>
-				<string>D747C520975FA97CF3B86B97A816477C</string>
-				<string>E8B817F5D945BABDAF51A14F39D3A2A2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>EVReflection</string>
-			<key>path</key>
-			<string>EVReflection</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BD1647430D2BB654803AD0D407F5BF1A</key>
 		<dict>
@@ -2718,9 +3167,42 @@
 		<key>BE41196F6A3903E59C3306FE3F8B43FE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9A8BFE1D5798EB84957FECC99793AAF3</string>
+			<string>2D7F1B7B6F7D43F50EADD06B76C65334</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>BEA6DE02B347CD157361A472E5C7B390</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Toast-Swift.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C001878468189F41D48EB634EBBE4C5D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0BD35A5A8CEDE0024219375314F14739</string>
+				<string>B6409B2CC88DA4F4225BB7907DA17938</string>
+				<string>BEA6DE02B347CD157361A472E5C7B390</string>
+				<string>626483B1A83B8142D2CD0AFD160A1043</string>
+				<string>DBEE4413A173B5B9568B84F775F3C3BD</string>
+				<string>78E280D5EFBE7A5176E8B709B2D058A8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Toast-Swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C08233757295397518FF9DFA398C0258</key>
 		<dict>
@@ -2732,7 +3214,7 @@
 		<key>C0DB70AB368765DC64BFB5FEA75E0696</key>
 		<dict>
 			<key>fileRef</key>
-			<string>315AD5A61B9682ACE5FC5D7A9B1BB700</string>
+			<string>7740D34CBF974BD31B9119AAC639A0AF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2774,6 +3256,19 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
+		<key>C3E5EE6392BAD6FDFE6A225380AD40E0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleAppUtilities.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleAppUtilities.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C3FD2526FE7BC450997FA029F2513E76</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2784,6 +3279,19 @@
 			<string>text</string>
 			<key>path</key>
 			<string>Pods-OathsUITests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C621E8AFBDD886FE6CBA5A3C257F3803</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>63F7FBD695B6EE357824089F74DEABCE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2801,23 +3309,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C7009BBFE646B7030DFFCC7404EA7A5A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Alamofire-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>C7B6DD7C0456C50289A2C381DFE9FA3F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>15E80819B45E63D65C5DF6AF7448F3CB</string>
+			<string>6133A7631A84BAC72DBDC4DD60969BF4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2827,6 +3322,19 @@
 			<string>258B0C8029B3982F03A30ED9FB271283</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>C848857FCD01265B4706CC40CA280078</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EVReflection-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C87C645F39E194D955CC80D25CE61BD7</key>
 		<dict>
@@ -2848,16 +3356,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C9D22BAADAFBDB8D41FD648B045B5680</key>
+		<key>C99BCE9440BD0C7D350AE2E9A88021CD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Response.swift</string>
 			<key>path</key>
-			<string>Info.plist</string>
+			<string>Source/Response.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2898,17 +3408,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CC691EB1566C5BB384BAAE5B262CE7C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EVReflection.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>CCC68BDA5A10570D683E6771F7074B9C</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -2922,35 +3421,7 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>CDE8CAB662D8AE2DDB1CB302CD565DDB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Toast-Swift-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D14211DF5691AD32E36E4E489C8F61B9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Validation.swift</string>
-			<key>path</key>
-			<string>Source/Validation.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D26862D3CED90E9366BAAD4F4C40F84E</key>
+		<key>CCF7238F9E9D663BDF55161FB162AA34</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2962,6 +3433,19 @@
 			<string>EVObject.swift</string>
 			<key>path</key>
 			<string>EVReflection/pod/EVObject.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CE57FAFAD3D3097FB1CCBCA1641CA39C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleInterchangeUtilities.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleInterchangeUtilities.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3099,25 +3583,36 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>D747C520975FA97CF3B86B97A816477C</key>
+		<key>D6B1D83A3C46D2E81F6C6CB121617DB1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6E85A68E75F29A9FC413EC6A824AC3CC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D85395759D32B0C508EC0801A8AB6B0D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>EVWorkaroundHelpers.swift</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>EVReflection/pod/EVWorkaroundHelpers.swift</string>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D8F604ABE9C7E520A73BB7B37CE5A9EC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5EE88AF2156271D3FD483B7B5717BD2B</string>
+			<string>B8BBB5711C93946D82ADDC420C538B28</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -3135,6 +3630,19 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>DBEE4413A173B5B9568B84F775F3C3BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Toast-Swift-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>DCE151C0EDBEB7517F9C27F6DC7F468B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3151,7 +3659,7 @@
 		<key>DDD135982FA3FBFAF77E8EC48CF38AD9</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1582FF340F6336707FFAAB5F15DACF70</string>
+			<string>4C4400A6692076322C439857E55387A9</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -3248,14 +3756,14 @@
 		<key>DFED4CDF8C06F7C1E393409044E9B94D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BA25DFE2CA664923E6CE74D0643F3605</string>
+			<string>8202A9810C2915A40D0EFB91F5FC58F5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>E04299D789FBD39D69D172B761980B7D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FEBCFE3904476C572F5DDE2DF2D8E5C5</string>
+			<string>BAD4A086B119B589F35AD0EE39ED6032</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -3331,6 +3839,64 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>E4BA8A15BC546098E408A4681851B694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GGLCore.framework</string>
+			<key>path</key>
+			<string>Frameworks/GGLCore.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E5F784B07B6D412550280711AD2CC652</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Analytics-Module.h</string>
+			<key>path</key>
+			<string>Headers/ModuleHeaders/Analytics-Module.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6859A9E0D7F8C1301A3BA198B2B9392</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Core-Module.h</string>
+			<key>path</key>
+			<string>Headers/ModuleHeaders/Core-Module.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6A313C7669153C4908D824E5FD4DEB5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Request.swift</string>
+			<key>path</key>
+			<string>Source/Request.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E734C4025DE74944E24880E672282831</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -3395,21 +3961,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>E7BA0D557D532549F2EEF62060E030B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Timeline.swift</string>
-			<key>path</key>
-			<string>Source/Timeline.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E7F4A69304ACD17AADAA212E95FEBFB9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3418,26 +3969,6 @@
 			<string>PBXFileReference</string>
 			<key>path</key>
 			<string>Pods-OathsTests.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E8B817F5D945BABDAF51A14F39D3A2A2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CC691EB1566C5BB384BAAE5B262CE7C5</string>
-				<string>0274EBD8C4D985B9C7636073637EBED4</string>
-				<string>17E8B35F3BB92A8AA836A2EBE8CFB88A</string>
-				<string>7BB32C8EDEDE828CCD056F02653CFB6F</string>
-				<string>85CFCD23F3CF696B79C0D8DDF06DBEAC</string>
-				<string>AE81FC1E082D85570DEF7FD3895DB3CC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/EVReflection</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3466,6 +3997,21 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
+		<key>EA1230DACD661E90BFFFA548AB821C5B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C621E8AFBDD886FE6CBA5A3C257F3803</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleAuthUtilities</string>
+			<key>path</key>
+			<string>GoogleAuthUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EB85A651E36DB1B9281FA98DF36DF485</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3492,6 +4038,19 @@
 			<key>remoteInfo</key>
 			<string>EVReflection</string>
 		</dict>
+		<key>EF7ED7D34AB7972A2AFB6CCE036C18E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CE57FAFAD3D3097FB1CCBCA1641CA39C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EFDF3B631BBB965A372347705CA14854</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -3508,9 +4067,24 @@
 		<key>EFE92E8D3813DD26E78E93EEAF6D7E7E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>58D94D3FB243C0866D2AC63893BB8258</string>
+			<string>E6A313C7669153C4908D824E5FD4DEB5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>F210E1DF8E8C8A91D529040294D22F20</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Timeline.swift</string>
+			<key>path</key>
+			<string>Source/Timeline.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F469DF348953F45D4DAA43FF10770040</key>
 		<dict>
@@ -3623,7 +4197,7 @@
 		<key>F986B36F635C5B5B164891DB7EEA1439</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1B2DC8EAA3620DBAFB36D550ED967751</string>
+			<string>BEA6DE02B347CD157361A472E5C7B390</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -3728,21 +4302,6 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>FEBCFE3904476C572F5DDE2DF2D8E5C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>EVReflection.swift</string>
-			<key>path</key>
-			<string>EVReflection/pod/EVReflection.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>FF0F2E84D0F0A8C2BADD4C1482F9EB2E</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -3805,6 +4364,21 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>FF23C6ABFF5B6B0A91348618BF354BC5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3B7B210BEB54D479C6C11DE353F0E112</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GoogleUtilities</string>
+			<key>path</key>
+			<string>GoogleUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FF73EB9809A6ACDCAFE74B68D5B18E48</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3815,6 +4389,30 @@
 			<string>text.plist.xml</string>
 			<key>path</key>
 			<string>Pods-OathsTests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFA286280B312A2482CC461C9C113F0B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFC317010A61A5CDD70720E2958CCC3D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>EVReflection.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

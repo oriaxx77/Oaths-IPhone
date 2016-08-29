@@ -6,6 +6,7 @@ use_frameworks!
 pod 'Alamofire'
 pod 'Toast-Swift', '~> 1.2.0'
 pod 'EVReflection'
+pod 'Google/SignIn'
 
 
 

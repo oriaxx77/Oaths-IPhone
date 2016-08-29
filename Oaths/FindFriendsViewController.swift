@@ -27,7 +27,7 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     // MARK: State
     
     var people = [Person]()
-    
+
     
     
     
@@ -91,13 +91,11 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     
     func addFriendAction() -> UITableViewRowAction {
         let addFriendAction = UITableViewRowAction(style: .Default, title: "Add", handler: {action, indexPath in
-            do {
+            self.tryExec {
                 try self.friendRepository.create( fromPerson: self.people[indexPath.row])
                 self.people.removeAtIndex(indexPath.row)
                 self.tableView.deleteRowsAtIndexPaths([indexPath],  withRowAnimation: .Automatic)
                 self.showToast( "Friend added" )
-            } catch let error as NSError {
-                self.showErrorDialog( "Error while adding new friend \(error), details:\(error.userInfo)" )
             }
         })
         return addFriendAction

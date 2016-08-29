@@ -14,17 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let authService = AuthService()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Push notifiction registration
+        // TODO: move this to a class
         let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
         let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
-        //TODO: remove constant email
-        AuthService().auth(withEmail: "istvan.bagyura@gmail.com")
         
         return true
     }
@@ -32,7 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Push notification
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        // TODO Move it to a class.
+        let deviceTokenString = deviceToken.hexString()
+        
+        // TODO: remove constant email address
+        authService.auth( email: "istvan.bagyura@gmail.com",  completionHandler: {(authToken) -> Void in
+            print("AUTH TOKEN= \(authToken)")
+            self.authService.registerPushNotificationDeviceToken(deviceToken: deviceTokenString, withAuthToken: authToken)
+            
+        })
+        
         print("DEVICE TOKEN = \(deviceToken)")
+        print("DEVICE TOKEN = \(deviceTokenString)")
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {

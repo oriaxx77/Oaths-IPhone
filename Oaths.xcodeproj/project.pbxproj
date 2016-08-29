@@ -10,6 +10,8 @@
 		360085D51D6D8B22003D7218 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D41D6D8B22003D7218 /* AuthService.swift */; };
 		360085D71D6D8D71003D7218 /* AlamofireExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D61D6D8D71003D7218 /* AlamofireExt.swift */; };
 		360085D91D6D90C9003D7218 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D81D6D90C9003D7218 /* AppConstants.swift */; };
+		360085DD1D6ED941003D7218 /* NSDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085DC1D6ED941003D7218 /* NSDataExt.swift */; };
+		360085DF1D7428A8003D7218 /* OathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085DE1D7428A8003D7218 /* OathDataSource.swift */; };
 		3614AA551D2BE02600AB181C /* OathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614AA541D2BE02600AB181C /* OathTableViewCell.swift */; };
 		3614AA581D2CE54600AB181C /* Oath+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614AA561D2CE54500AB181C /* Oath+CoreDataProperties.swift */; };
 		3614AA591D2CE54600AB181C /* Oath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614AA571D2CE54600AB181C /* Oath.swift */; };
@@ -33,7 +35,7 @@
 		36999FAE1D619A7B00020B60 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FAD1D619A7B00020B60 /* FriendRepository.swift */; };
 		36999FB01D619F0100020B60 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FAF1D619F0100020B60 /* UIViewControllerExt.swift */; };
 		36999FB21D61A37D00020B60 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB11D61A37D00020B60 /* Person.swift */; };
-		36999FB41D61AD0B00020B60 /* PeopleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB31D61AD0B00020B60 /* PeopleDataSource.swift */; };
+		36999FB41D61AD0B00020B60 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB31D61AD0B00020B60 /* GenericDataSource.swift */; };
 		36999FB61D644A5D00020B60 /* FindFriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB51D644A5D00020B60 /* FindFriendService.swift */; };
 		7524D7ECCFF19FE7BF1EF867 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AA014F9F60E70B613448C /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		360085D41D6D8B22003D7218 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		360085D61D6D8D71003D7218 /* AlamofireExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExt.swift; sourceTree = "<group>"; };
 		360085D81D6D90C9003D7218 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		360085DC1D6ED941003D7218 /* NSDataExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExt.swift; sourceTree = "<group>"; };
+		360085DE1D7428A8003D7218 /* OathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDataSource.swift; sourceTree = "<group>"; };
 		3614AA541D2BE02600AB181C /* OathTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathTableViewCell.swift; sourceTree = "<group>"; };
 		3614AA561D2CE54500AB181C /* Oath+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Oath+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3614AA571D2CE54600AB181C /* Oath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oath.swift; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 		36999FAD1D619A7B00020B60 /* FriendRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		36999FAF1D619F0100020B60 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		36999FB11D61A37D00020B60 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		36999FB31D61AD0B00020B60 /* PeopleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDataSource.swift; sourceTree = "<group>"; };
+		36999FB31D61AD0B00020B60 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		36999FB51D644A5D00020B60 /* FindFriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendService.swift; sourceTree = "<group>"; };
 		36999FB91D6AE5EF00020B60 /* Oaths 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Oaths 3.xcdatamodel"; sourceTree = "<group>"; };
 		DA1AA014F9F60E70B613448C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 				3614AA561D2CE54500AB181C /* Oath+CoreDataProperties.swift */,
 				3614AA571D2CE54600AB181C /* Oath.swift */,
 				3614AA5A1D2CED1B00AB181C /* OathRepository.swift */,
+				360085DE1D7428A8003D7218 /* OathDataSource.swift */,
 			);
 			name = Oath;
 			sourceTree = "<group>";
@@ -135,7 +140,6 @@
 		360085DB1D6D9B30003D7218 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
-				36999FB31D61AD0B00020B60 /* PeopleDataSource.swift */,
 				36999FB51D644A5D00020B60 /* FindFriendService.swift */,
 				36999FAD1D619A7B00020B60 /* FriendRepository.swift */,
 				36999FB11D61A37D00020B60 /* Person.swift */,
@@ -188,6 +192,7 @@
 		361746741D5B16680004103D /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				36999FB31D61AD0B00020B60 /* GenericDataSource.swift */,
 				361746771D5B22B40004103D /* GenericRepository.swift */,
 				361746751D5B16A00004103D /* CoreDataAccess.swift */,
 				360085D61D6D8D71003D7218 /* AlamofireExt.swift */,
@@ -230,6 +235,7 @@
 				36895EF01D0703DE000E33A5 /* Info.plist */,
 				36895EE81D0703DE000E33A5 /* Oaths.xcdatamodeld */,
 				360085D81D6D90C9003D7218 /* AppConstants.swift */,
+				360085DC1D6ED941003D7218 /* NSDataExt.swift */,
 			);
 			path = Oaths;
 			sourceTree = "<group>";
@@ -466,10 +472,11 @@
 				3614AA5B1D2CED1B00AB181C /* OathRepository.swift in Sources */,
 				3614AA611D2CF95A00AB181C /* FriendsTableViewController.swift in Sources */,
 				36999FB61D644A5D00020B60 /* FindFriendService.swift in Sources */,
-				36999FB41D61AD0B00020B60 /* PeopleDataSource.swift in Sources */,
+				36999FB41D61AD0B00020B60 /* GenericDataSource.swift in Sources */,
 				360085D91D6D90C9003D7218 /* AppConstants.swift in Sources */,
 				3614AA581D2CE54600AB181C /* Oath+CoreDataProperties.swift in Sources */,
 				3614AA551D2BE02600AB181C /* OathTableViewCell.swift in Sources */,
+				360085DF1D7428A8003D7218 /* OathDataSource.swift in Sources */,
 				36999FB21D61A37D00020B60 /* Person.swift in Sources */,
 				361746781D5B22B40004103D /* GenericRepository.swift in Sources */,
 				3614AA591D2CE54600AB181C /* Oath.swift in Sources */,
@@ -483,6 +490,7 @@
 				36895EE41D0703DE000E33A5 /* OathTableViewController.swift in Sources */,
 				36895EE21D0703DE000E33A5 /* AppDelegate.swift in Sources */,
 				361746701D5B074C0004103D /* Friend.swift in Sources */,
+				360085DD1D6ED941003D7218 /* NSDataExt.swift in Sources */,
 				3617467A1D5B54D20004103D /* FindFriendsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +638,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Oaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.MyOaths;
@@ -646,7 +653,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Oaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.MyOaths;

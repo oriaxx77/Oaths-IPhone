@@ -26,19 +26,11 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.allowsMultipleSelection = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(animated: Bool) {
-        
-        do {
-            try self.oaths = oathRepo.getAll();
-        } catch let error as NSError {
-            self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+        tryExec {
+            try self.oaths = self.oathRepo.getAll();
         }
-        
     }
 
     // MARK: actions
@@ -63,14 +55,11 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func createOath(oathString: String) -> Void {
-        do {
-            let oathOpt =  try oathRepo.create(oathString)
-            if let oath =  oathOpt {
-                oaths.append(oath)
-                tableView.reloadData()
-            }
-        } catch let error as NSError {
-            self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+        
+        tryExec{ let oathOpt =  try self.oathRepo.create(oathString)
+              if let oath =  oathOpt {
+                self.oaths.append(oath)
+                self.tableView.reloadData()}
         }
     }
     
@@ -105,12 +94,10 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func resistTemptationAction() -> UITableViewRowAction {
         let resistTempatationAction = UITableViewRowAction(style: .Default, title: "Resisted", handler: {action,idxPath in
-            do {
+            self.tryExec {
                 self.oaths[idxPath.row].incrementTemptationResisted();
                 try self.oathRepo.save()
                 self.tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
-            } catch let error as NSError {
-                self.showErrorDialog( "Error while increasing resisting temptation \(error), deails:\(error.userInfo)" )
             }
         })
         resistTempatationAction.backgroundColor = UIColor.greenColor()
@@ -121,12 +108,10 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     func failTemptationAction() -> UITableViewRowAction {
         
         let failTemptationAction = UITableViewRowAction(style: .Default, title: "Failed", handler: {action,idxPath in
-            do {
-                    self.oaths[idxPath.row].incrementTemptationFailed();
-                    try self.oathRepo.save()
-                    self.tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
-            } catch let error as NSError {
-                self.showErrorDialog( "Error while increasing failedTemptation \(error), deails:\(error.userInfo)" )
+            self.tryExec{
+                self.oaths[idxPath.row].incrementTemptationFailed();
+                try self.oathRepo.save()
+                self.tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
             }
         })
         failTemptationAction.backgroundColor = UIColor.orangeColor()
@@ -136,13 +121,10 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func deleteAction() -> UITableViewRowAction {
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: {action, indexPath in
-            do {
+            self.tryExec {
                 try self.oathRepo.delete( self.oaths[indexPath.row] )
                 self.oaths.removeAtIndex( indexPath.row )
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                
-            } catch let error as NSError {
-                self.showErrorDialog( "Error while deleting oath \(error), deails:\(error.userInfo)" )
             }
             
         })

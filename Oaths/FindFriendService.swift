@@ -15,9 +15,9 @@ class FindFriendsService{
     let friendRepository = FriendRepository();
     
     func loadPeople( filter filter: String,
-                 completionHandler: ([Person]) -> Void ) {
+                     completionHandler: ([Person]) -> Void ) {
     
-    
+        // TODO: clean code
         Alamofire.request(.GET, K.EndpointUrls.PersonUrl ,parameters: ["filter": filter])
             .responseJSON{ (response) -> Void in
             

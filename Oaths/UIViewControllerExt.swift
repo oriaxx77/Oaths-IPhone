@@ -20,5 +20,14 @@ extension UIViewController{
     func showToast( message: String ){
         self.view.makeToast( message, duration: 4.0, position: .Center)
     }
+    
+    func tryExec( action:() throws -> Void ){
+        do {
+            try action()
+        }
+        catch let error as NSError {
+            self.showErrorDialog( "Error while loading oaths \(error), deails:\(error.userInfo)" )
+        }
+    }
 
 }
