@@ -12,9 +12,4 @@ class OathDataSource: GenericDataSource<Oath>{
     
     var oathRepo = OathRepository()
     
-    override func loadEntities() {
-        <#code#>
-    }
-    
-    
 }
