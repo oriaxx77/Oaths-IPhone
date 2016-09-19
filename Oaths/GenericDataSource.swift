@@ -1,5 +1,5 @@
 //
-//  PeopleDataSource.swift
+//  
 //  Oaths
 //
 //  Created by Bagyura Istvan on 15/08/16.
@@ -13,7 +13,6 @@ class GenericDataSource<T>{
     
     private var entities = [T]()
     
-    
     func getEntities() -> [T]{
         if entities.isEmpty {
             loadEntities()
@@ -24,6 +23,7 @@ class GenericDataSource<T>{
     func loadEntities(){
         // Override this to load the entities
     }
+    
     
     
 }

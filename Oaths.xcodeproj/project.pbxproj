@@ -37,6 +37,7 @@
 		36999FB21D61A37D00020B60 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB11D61A37D00020B60 /* Person.swift */; };
 		36999FB41D61AD0B00020B60 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB31D61AD0B00020B60 /* GenericDataSource.swift */; };
 		36999FB61D644A5D00020B60 /* FindFriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB51D644A5D00020B60 /* FindFriendService.swift */; };
+		36F009C21D8FC699001482A1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F009C11D8FC699001482A1 /* SettingsTableViewController.swift */; };
 		7524D7ECCFF19FE7BF1EF867 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AA014F9F60E70B613448C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		36999FB31D61AD0B00020B60 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		36999FB51D644A5D00020B60 /* FindFriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendService.swift; sourceTree = "<group>"; };
 		36999FB91D6AE5EF00020B60 /* Oaths 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Oaths 3.xcdatamodel"; sourceTree = "<group>"; };
+		36F009C11D8FC699001482A1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		DA1AA014F9F60E70B613448C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2E68E47B9E469BB3F5E73D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				3614AA5F1D2CF91C00AB181C /* Oath */,
 				3614AA5E1D2CF91300AB181C /* Friend */,
 				36999FAF1D619F0100020B60 /* UIViewControllerExt.swift */,
+				36F009BE1D8FC3FD001482A1 /* Settings */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -257,6 +260,14 @@
 				36895F061D0703DE000E33A5 /* Info.plist */,
 			);
 			path = OathsUITests;
+			sourceTree = "<group>";
+		};
+		36F009BE1D8FC3FD001482A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				36F009C11D8FC699001482A1 /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		93F54D566FC5CD4E4C35ADB2 /* Frameworks */ = {
@@ -481,6 +492,7 @@
 				361746781D5B22B40004103D /* GenericRepository.swift in Sources */,
 				3614AA591D2CE54600AB181C /* Oath.swift in Sources */,
 				360085D51D6D8B22003D7218 /* AuthService.swift in Sources */,
+				36F009C21D8FC699001482A1 /* SettingsTableViewController.swift in Sources */,
 				3617466F1D5B074C0004103D /* Friend+CoreDataProperties.swift in Sources */,
 				36999FAE1D619A7B00020B60 /* FriendRepository.swift in Sources */,
 				36999FB01D619F0100020B60 /* UIViewControllerExt.swift in Sources */,
