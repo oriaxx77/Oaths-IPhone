@@ -10,25 +10,26 @@ import Foundation
 import UIKit
 import CoreData
 
+enum GenericRepositoryError: Error {
+    case existingEntity
+}
+
 class GenericRepository<T:NSManagedObject>: NSObject{
     
     let coreDataAccess: CoreDataAccess
-    let entityName: String
     
     override init(){
         self.coreDataAccess = CoreDataAccess();
-        self.entityName = String(T.self)
     }
     
     func getAll() throws -> [T]{
         return try coreDataAccess.doInDb({(ctx) throws -> [T] in
-            let fetchRequest = NSFetchRequest(entityName: self.entityName)
-            let results = try ctx.executeFetchRequest(fetchRequest)
+            let results = try ctx.fetch( T.fetchRequest() )
             return results as! [T]
         })
     }
     
-    func doInDb<R>( action:((managedContext: NSManagedObjectContext) throws -> R)) throws -> R{
+    func doInDb<R>( _ action:((_ managedContext: NSManagedObjectContext) throws -> R)) throws -> R{
         return try coreDataAccess.doInDb( action )
     }
     
@@ -36,33 +37,27 @@ class GenericRepository<T:NSManagedObject>: NSObject{
         try coreDataAccess.save()
     }
     
-    func delete( entity:T) throws {
+    func delete( _ entity:T) throws {
         try coreDataAccess.delete( entity )
     }
     
-    func create( uniquePredicate: NSPredicate, setProperties:((t:T) -> Void)) throws -> T? {
+    func createIfNotExist( _ uniquePredicate: NSPredicate, setProperties:@escaping ((_ t:T) -> Void)) throws -> T {
         
         return try coreDataAccess.doInDb({(ctx) throws -> T? in
             
-            // Create Oath entity
-            let entity = NSEntityDescription.entityForName( self.entityName, inManagedObjectContext: ctx)
-            
-            
-            // Check if entity exist
-            let fetchRequest = NSFetchRequest()
-            fetchRequest.entity = entity;
+            let fetchRequest:NSFetchRequest<NSFetchRequestResult> = T.fetchRequest()
             fetchRequest.predicate = uniquePredicate
-            let results = try ctx.executeFetchRequest(fetchRequest)
+            let results = try ctx.fetch(fetchRequest)
             if ( !(results as! [NSManagedObject]).isEmpty ) {
-                return T?()
+                throw GenericRepositoryError.existingEntity
             }
             
-            // Create if it does not exist
-            let newObject = T(entity: entity!,insertIntoManagedObjectContext: ctx)
-            setProperties( t: newObject );
+            
+            let newObject = T( context: ctx )
+            setProperties( newObject );
             try ctx.save()
             return newObject;
-        })
+        })!
     }
     
 }

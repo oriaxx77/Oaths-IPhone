@@ -27,36 +27,36 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tryExec {
             try self.oaths = self.oathRepo.getAll();
         }
     }
 
     // MARK: actions
-    @IBAction func createNewOath(sender: AnyObject) {
-        let alert = UIAlertController(title: "New Oath", message: "Add a new oath", preferredStyle: .Alert)
+    @IBAction func createNewOath(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "New Oath", message: "Add a new oath", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save",
-                                       style: .Default,
+                                       style: .default,
                                        handler:{ (action: UIAlertAction) -> Void in
                                         let textField = alert.textFields!.first
                                         self.createOath(textField!.text!)
                                         
         })
         alert.addAction(saveAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: {(action: UIAlertAction)-> Void in})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(action: UIAlertAction)-> Void in})
         alert.addAction(cancelAction)
-        alert.addTextFieldWithConfigurationHandler{
+        alert.addTextField{
             (textField:UITextField) -> Void in
         }
-        presentViewController(alert, animated: false, completion: nil)
+        present(alert, animated: false, completion: nil)
         
     }
     
     
-    func createOath(oathString: String) -> Void {
+    func createOath(_ oathString: String) -> Void {
         
-        tryExec{ let oathOpt =  try self.oathRepo.create(oathString)
+        tryExec{ let oathOpt =  try self.oathRepo.createIfNotExist(oathString)
               if let oath =  oathOpt {
                 self.oaths.append(oath)
                 self.tableView.reloadData()}
@@ -67,64 +67,64 @@ class OathTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     // MARK: UITableViewDataSource methods
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return oaths.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("OathTableViewCell") as? OathTableViewCell
-        let oath = oaths[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OathTableViewCell") as? OathTableViewCell
+        let oath = oaths[(indexPath as NSIndexPath).row]
         cell!.oathLabel!.text = oath.oath
-        cell!.temptationFailedLabel!.text = String(oath.temptationFailed!)
-        cell!.temptationResistedLabel!.text = String(oath.temptationResisted!)
-        let dateFormatter = NSDateFormatter()
+        cell!.temptationFailedLabel!.text = String(describing: oath.temptationFailed!)
+        cell!.temptationResistedLabel!.text = String(describing: oath.temptationResisted!)
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
-        let creationDateString = dateFormatter.stringFromDate(oath.creationDate!)
+        let creationDateString = dateFormatter.string(from: oath.creationDate! as Date)
         cell!.creationDateLabel!.text = creationDateString
         return cell!
     }
     
 
     //MARK: UITableViewDelegate
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         return [deleteAction(),resistTemptationAction(),failTemptationAction()]
     }
     
     
     
     func resistTemptationAction() -> UITableViewRowAction {
-        let resistTempatationAction = UITableViewRowAction(style: .Default, title: "Resisted", handler: {action,idxPath in
+        let resistTempatationAction = UITableViewRowAction(style: .default, title: "Resisted", handler: {action,idxPath in
             self.tryExec {
-                self.oaths[idxPath.row].incrementTemptationResisted();
+                self.oaths[(idxPath as NSIndexPath).row].incrementTemptationResisted();
                 try self.oathRepo.save()
-                self.tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
+                self.tableView.reloadRows(at: [idxPath], with: .automatic)
             }
         })
-        resistTempatationAction.backgroundColor = UIColor.greenColor()
+        resistTempatationAction.backgroundColor = UIColor.green
         return resistTempatationAction
     }
     
     
     func failTemptationAction() -> UITableViewRowAction {
         
-        let failTemptationAction = UITableViewRowAction(style: .Default, title: "Failed", handler: {action,idxPath in
+        let failTemptationAction = UITableViewRowAction(style: .default, title: "Failed", handler: {action,idxPath in
             self.tryExec{
-                self.oaths[idxPath.row].incrementTemptationFailed();
+                self.oaths[(idxPath as NSIndexPath).row].incrementTemptationFailed();
                 try self.oathRepo.save()
-                self.tableView.reloadRowsAtIndexPaths([idxPath], withRowAnimation: .Automatic)
+                self.tableView.reloadRows(at: [idxPath], with: .automatic)
             }
         })
-        failTemptationAction.backgroundColor = UIColor.orangeColor()
+        failTemptationAction.backgroundColor = UIColor.orange
         return failTemptationAction
     }
     
     
     func deleteAction() -> UITableViewRowAction {
-        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: {action, indexPath in
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: {action, indexPath in
             self.tryExec {
-                try self.oathRepo.delete( self.oaths[indexPath.row] )
-                self.oaths.removeAtIndex( indexPath.row )
-                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                try self.oathRepo.delete( self.oaths[(indexPath as NSIndexPath).row] )
+                self.oaths.remove( at: (indexPath as NSIndexPath).row )
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             
         })

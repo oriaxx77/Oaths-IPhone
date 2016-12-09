@@ -12,13 +12,13 @@ import CoreData
 
 class OathRepository: GenericRepository<Oath>{
     
-    func create(oathString: String) throws -> Oath? {
+    func createIfNotExist(_ oathString: String) throws -> Oath? {
         let uniquePredicate = NSPredicate( format: "oath == %@", oathString );
-        return try super.create(uniquePredicate, setProperties: {(oath) -> Void in
+        return try super.createIfNotExist(uniquePredicate, setProperties: {(oath) -> Void in
             oath.oath = oathString
             oath.temptationFailed = 0
             oath.temptationFailed = 0
-            oath.creationDate = NSDate()
+            oath.creationDate = Date()
         })
     }
     

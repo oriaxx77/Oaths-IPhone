@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSData {
+extension Data {
     func hexString() -> String {
-        let bytes = UnsafeBufferPointer<UInt8>(start: UnsafePointer(self.bytes), count:self.length)
+        let bytes = UnsafeBufferPointer<UInt8>(start: (self as NSData).bytes.bindMemory(to: UInt8.self, capacity: self.count), count:self.count)
         let hexBytes = bytes.map{ String(format: "%02hhx", $0) }
-        return hexBytes.joinWithSeparator("")
+        return hexBytes.joined(separator: "")
     }
 }

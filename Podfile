@@ -1,12 +1,11 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-pod 'Alamofire'
-pod 'Toast-Swift', '~> 1.2.0'
-pod 'EVReflection'
-pod 'Google/SignIn'
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'master'
+pod 'Toast-Swift', :git => 'https://github.com/scalessec/Toast-Swift', :branch => 'master'
+pod 'EVReflection', :git => 'https://github.com/evermeer/EVReflection', :branch => 'master'
 
 
 
@@ -21,4 +20,3 @@ end
 target 'OathsUITests' do
 
 end
-

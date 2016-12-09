@@ -26,7 +26,7 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     
     // MARK: State
     
-    var people = [Person]()
+    var strangers = [Person]()
 
     
     
@@ -34,15 +34,15 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     
     // MARK: Event Handlers
     
-    @IBAction func onCancel(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func onCancel(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     
     
     
     // MARK: UISearchResultsUpdating
-    func updateSearchResultsForSearchController(searchController: UISearchController){
+    func updateSearchResults(for searchController: UISearchController){
         loadPeopleForSearchText(searchController.searchBar.text!)
     }
     
@@ -59,42 +59,44 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     }
     
     
-    func loadPeopleForSearchText(searchText: String) {
-        findFriendService.loadPeople(filter: searchText, completionHandler: {(people) -> Void in
-                self.people = people
+    func loadPeopleForSearchText(_ searchText: String) {
+        findFriendService.getStrangers(filter: searchText, completionHandler: {(strangers) -> Void in
+                self.strangers = strangers
+                print("self.strangers.count: \(self.strangers.count)")
                 self.tableView.reloadData()
             })
     }
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return strangers.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FindFriendsTableViewCell") as? FindFriendsTableViewCell
-        let person = people[indexPath.row]
-        cell?.nameLabel.text = "\(person.firstName) \(person.surName)"
-        cell?.emailLabel.text = "(\(person.email))"
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FindFriendsTableViewCell") as? FindFriendsTableViewCell
+        let person = strangers[(indexPath as NSIndexPath).row]
+        cell?.oathLabel.text = "\(person.oath)"
+        cell?.nameLabel.text = "\(person.name)"
+        cell?.emailLabel.text = "\(person.email)"
         return cell!;
     }
     
     
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?{
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
         return [addFriendAction()]
     }
     
     func addFriendAction() -> UITableViewRowAction {
-        let addFriendAction = UITableViewRowAction(style: .Default, title: "Add", handler: {action, indexPath in
+        let addFriendAction = UITableViewRowAction(style: .default, title: "Add", handler: {action, indexPath in
             self.tryExec {
-                try self.friendRepository.create( fromPerson: self.people[indexPath.row])
-                self.people.removeAtIndex(indexPath.row)
-                self.tableView.deleteRowsAtIndexPaths([indexPath],  withRowAnimation: .Automatic)
+                try self.friendRepository.create( fromPerson: self.strangers[(indexPath as NSIndexPath).row])
+                self.strangers.remove(at: (indexPath as NSIndexPath).row)
+                self.tableView.deleteRows(at: [indexPath],  with: .automatic)
                 self.showToast( "Friend added" )
             }
         })

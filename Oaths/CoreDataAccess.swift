@@ -14,14 +14,14 @@ class CoreDataAccess {
     
     func doInDb<R>(
         
-        action:   ((managedContext: NSManagedObjectContext) throws -> R)
+        _ action:   ((_ managedContext: NSManagedObjectContext) throws -> R)
         
         ) throws -> R
     {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
-        return try action( managedContext: managedContext)
+        return try action( managedContext)
     }
     
     func save() throws {
@@ -30,9 +30,9 @@ class CoreDataAccess {
         })
     }
     
-    func delete( object: NSManagedObject ) throws {
+    func delete( _ object: NSManagedObject ) throws {
         try doInDb({(ctx) -> Void in
-            ctx.deleteObject(object)
+            ctx.delete(object)
             try ctx.save()
         })
     }

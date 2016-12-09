@@ -10,9 +10,9 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.row {
+        switch (indexPath as NSIndexPath).row {
         case 1:
             findMeByCode()
         default:
@@ -23,16 +23,16 @@ class SettingsTableViewController: UITableViewController {
     
     func findMeByCode() {
         
-        let dialog = UIAlertController(title: "Login", message: "Enter your code:", preferredStyle: .Alert)
+        let dialog = UIAlertController(title: "Login", message: "Enter your code:", preferredStyle: .alert)
         dialog.addAction(UIAlertAction( title: "Login",
-                                        style: .Default,
+                                        style: .default,
                                         handler:{ (action: UIAlertAction) -> Void in
                                             if let code = dialog.textFields?.first!.text {
                                                 self.showToast("Login button clicked: \(code)")
                                             }
                                         }))
-        dialog.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        dialog.addTextFieldWithConfigurationHandler{ (textField) -> Void in }
-        self.presentViewController(dialog, animated: true, completion: nil)
+        dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        dialog.addTextField{ (textField) -> Void in }
+        self.present(dialog, animated: true, completion: nil)
     }
 }

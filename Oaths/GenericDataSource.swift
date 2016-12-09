@@ -11,7 +11,7 @@ import Alamofire
 
 class GenericDataSource<T>{
     
-    private var entities = [T]()
+    fileprivate var entities = [T]()
     
     func getEntities() -> [T]{
         if entities.isEmpty {

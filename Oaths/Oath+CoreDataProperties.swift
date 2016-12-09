@@ -14,7 +14,7 @@ import CoreData
 
 extension Oath {
 
-    @NSManaged var creationDate: NSDate?
+    @NSManaged var creationDate: Date?
     @NSManaged var oath: String?
     @NSManaged var temptationFailed: NSNumber?
     @NSManaged var temptationResisted: NSNumber?

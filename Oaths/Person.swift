@@ -9,19 +9,22 @@
 import Foundation
 
 class Person {
-    let email: String
-    let firstName: String
-    let surName: String
     
-    init( email: String, firstName: String, surName: String ){
+    let email: String
+    let name: String
+    let oath: String
+    
+    init( email: String, name: String, oath: String ){
         self.email = email
-        self.firstName = firstName
-        self.surName = surName
+        self.name = name
+        self.oath = oath
     }
     
     init( json: [String:AnyObject] ){
-        self.email = json["email"] as! String
-        self.firstName = json["firstName"] as! String
-        self.surName = json["surName"] as! String
+        self.oath = json["oath"] as! String
+        let oathTaker = json["oathTaker"] as! [String: AnyObject]
+        self.name = oathTaker["name"] as! String
+        self.email = oathTaker["email"] as! String
+        
     }
 }

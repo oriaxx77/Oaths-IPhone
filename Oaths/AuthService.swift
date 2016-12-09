@@ -11,10 +11,12 @@ import Alamofire
 
 class AuthService{
     
-    func auth( email email: String,
-               completionHandler: (String) -> Void ){
+    func auth( email: String,
+               completionHandler: @escaping (String) -> Void ){
         
         // TODO: remove the constant bodyObject
+        // TODO: fix this
+        /*
         Alamofire.Manager.request(.PUT, K.EndpointUrls.AuthUrl, bodyObject: email )
             .responseString( completionHandler: { (response) -> Void in
                 
@@ -28,14 +30,16 @@ class AuthService{
                     completionHandler( authToken )
                 }
         });
+        */
         
     }
     
     
-    func registerPushNotificationDeviceToken(  deviceToken deviceToken: String,
+    func registerPushNotificationDeviceToken(  deviceToken: String,
                                                withAuthToken authToken: String ) {
         
-        
+        // TODO: fix  this
+        /*
         Alamofire.request(.POST, K.EndpointUrls.RegisterDeviceTokenUrl ,parameters: ["authToken": authToken, "deviceToken": deviceToken])
             .responseString{ (response) -> Void in
                 
@@ -53,7 +57,7 @@ class AuthService{
                 }
                 */
                 
-        } ;
+        } ;*/
         
     }
     

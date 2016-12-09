@@ -11,17 +11,17 @@ import UIKit
 
 extension UIViewController{
     
-    func showErrorDialog( message: String ){
-        let alert = UIAlertController(title: "Hey", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+    func showErrorDialog( _ message: String ){
+        let alert = UIAlertController(title: "Hey", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
-    func showToast( message: String ){
-        self.view.makeToast( message, duration: 4.0, position: .Center)
+    func showToast( _ message: String ){
+        self.view.makeToast( message, duration: 4.0, position:  .center )
     }
     
-    func tryExec( action:() throws -> Void ){
+    func tryExec( _ action:() throws -> Void ){
         do {
             try action()
         }

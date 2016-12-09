@@ -15,11 +15,11 @@ class Oath: NSManagedObject {
     // Insert code here to add functionality to your managed object subclass
         
     func incrementTemptationFailed(){
-        self.temptationFailed = NSNumber( int: self.temptationFailed!.integerValue + 1 )
+        self.temptationFailed = NSNumber(value: self.temptationFailed!.intValue + 1 as Int32)
     }
     
     func incrementTemptationResisted(){
-        self.temptationResisted = NSNumber( int: self.temptationResisted!.integerValue + 1 )
+        self.temptationResisted = NSNumber(value: self.temptationResisted!.intValue + 1 as Int32)
     }
 
 }

@@ -8,10 +8,11 @@
 [![Coverage](https://img.shields.io/badge/coverage-91%-yellow.svg?style=flat)](https://raw.githubusercontent.com/evermeer/EVReflection/master/EVReflection/coverage.png)
 [![Documentation](https://img.shields.io/badge/documented-97%-green.svg?style=flat)](http://cocoadocs.org/docsets/EVReflection)
 [![Stars](https://img.shields.io/github/stars/evermeer/EVReflection.svg?style=flat)](https://github.com/evermeer/EVReflection/stargazers)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/matteocrippa/awesome-swift#json)
 
 [![Version](https://img.shields.io/cocoapods/v/EVReflection.svg?style=flat)](http://cocoadocs.org/docsets/EVReflection)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Language](https://img.shields.io/badge/language-swift2-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Language](https://img.shields.io/badge/language-swift 3-f48041.svg?style=flat)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/cocoapods/p/EVReflection.svg?style=flat)](http://cocoadocs.org/docsets/EVReflection)
 [![License](https://img.shields.io/cocoapods/l/EVReflection.svg?style=flat)](http://cocoadocs.org/docsets/EVReflection)
 
@@ -21,12 +22,14 @@
 [![Website](https://img.shields.io/badge/website-evict.nl-blue.svg?style=flat)](http://evict.nl)
 [![eMail](https://img.shields.io/badge/email-edwin@evict.nl-blue.svg?style=flat)](mailto:edwin@evict.nl?SUBJECT=About EVReflection)
 
+If you have a question and don't want to create an issue, then we can [![Join the chat at https://gitter.im/evermeer/EVReflection](https://badges.gitter.im/evermeer/EVReflection.svg)](https://gitter.im/evermeer/EVReflection?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+At this moment the master branch is for Swift 3. If you want to continue using EVReflection in Swift 2.2 (or 2.3) then switch to the Swift2.2 or Swift2.3 branch.
 Run the unit tests to see EVReflection in action.
 
 EVReflection is used extensively in [EVCloudKitDao](https://github.com/evermeer/EVCloudKitDao), [AlamofireJsonToObjects](https://github.com/evermeer/AlamofireJsonToObjects) and [AlamofireXmlToObjects](https://github.com/evermeer/AlamofireXmlToObjects)
 
-In most cases EVReflection is verry easy to use. Just take a look at the [YouTube tutorial](https://www.youtube.com/watch?v=LPWsQD2nxqg) or the section [It's easy to use](https://github.com/evermeer/EVReflection#its-easy-to-use). But if you do want to do non standard specific things, then EVReflection will offer you an extensive range of functionality. For more information see:
+In most cases EVReflection is very easy to use. Just take a look at the [YouTube tutorial](https://www.youtube.com/watch?v=LPWsQD2nxqg) or the section [It's easy to use](https://github.com/evermeer/EVReflection#its-easy-to-use). But if you do want to do non standard specific things, then EVReflection will offer you an extensive range of functionality. For more information see:
 
 - [Main features of EVReflection](https://github.com/evermeer/EVReflection#main-features-of-evreflection)
 - [Quick start](https://github.com/evermeer/EVReflection#quick-start)
@@ -34,25 +37,27 @@ In most cases EVReflection is verry easy to use. Just take a look at the [YouTub
 - [If you have XML instead of JSON](https://github.com/evermeer/EVReflection#if-you-have-xml-instead-of-json)
 - [Using EVReflection in your own App](https://github.com/evermeer/EVReflection#using-evreflection-in-your-own-app)
 - [More Sample code](https://github.com/evermeer/EVReflection#more-sample-code)
+- [Extending existing objects](https://github.com/evermeer/EVReflection#extending-existing-objects)
 - [Conversion options](https://github.com/evermeer/EVReflection#conversion-options)
 - [Automatic keyword mapping for Swift keywords](https://github.com/evermeer/EVReflection#automatic-keyword-mapping-for-swift-keywords)
 - [Automatic keyword mapping PascalCase or camelCase to snake_case](https://github.com/evermeer/EVReflection#automatic-keyword-mapping-pascalcase-or-camelcase-to-snake_case)
 - [Custom keyword mapping](https://github.com/evermeer/EVReflection#custom-keyword-mapping)
 - [Custom property converters](https://github.com/evermeer/EVReflection#custom-property-converters)
-- [Skip the serialisaton or deserialisation of specific values](https://github.com/evermeer/EVReflection#skip-the-serialisaton-or-deserialisation-of-specific-values)
+- [Skip the serialization or deserialization of specific values](https://github.com/evermeer/EVReflection#skip-the-serialization-or-deserialization-of-specific-values)
 - [Property validators](https://github.com/evermeer/EVReflection#property-validators)
-- [Deserialisaton class level validations](https://github.com/evermeer/EVReflection#deserialisaton-class-level-validations)
+- [Deserialization class level validations](https://github.com/evermeer/EVReflection#deserialization-class-level-validations)
 - [What to do when you use object enheritance](https://github.com/evermeer/EVReflection#what-to-do-when-you-use-object-enheritance)
 - [Known issues](https://github.com/evermeer/EVReflection#known-issues)
 - [License](https://github.com/evermeer/EVReflection#license)
 - [My other libraries](https://github.com/evermeer/EVReflection#my-other-libraries)
 
 ## Main features of EVReflection:
-- Parsing objects based on NSObject to and from a dictionary.
+- Parsing objects based on NSObject to and from a dictionary. (also see the XML and .plist samples!)
 - Parsing objects to and from a JSON string.
 - Support NSCoding function encodeWithCoder and decodeObjectWithCoder
-- Supporting Printable, Hashable and Equatable while using all properties. (Support for Set in Swift 1.2)
+- Supporting Printable, Hashable and Equatable while using all properties.
 - Mapping objects from one type to an other
+- Support for property mapping, converters, validators and key cleanup
 
 ## Quick start
 For a quick start have a look at this [YouTube tutorial](https://www.youtube.com/watch?v=LPWsQD2nxqg).
@@ -110,12 +115,16 @@ let xml = "<user><id>27</id><name>Bob</name><friends><user><id>20</id><name>Jen<
 let user = User(dictionary: NSDictionary(XMLString: xml))
 ```
 
+## Using EVReflection with Alamofire
+Usually your JSON or XML will come frome a remote network location. The library [Alamofire](https://github.com/Alamofire/Alamofire) is often used for this. I have created 2 helper libraries that will make it verry easy working with EVReflection and Alamofire. Have a look at 
+[AlamofireJsonToObjects](https://github.com/evermeer/AlamofireJsonToObjects) and [AlamofireXmlToObjects](https://github.com/evermeer/AlamofireXmlToObjects). For an extensive sample how to use this, you could take a look at this WordPress (Jetpack) API using AlamofireOauth2 and AlamofireJsonToObjects [EVWordPressAPI](https://github.com/evermeer/EVWordPressAPI)
+
 ## Using EVReflection in your own App 
 
 'EVReflection' is available through the dependency manager [CocoaPods](http://cocoapods.org). 
 You do have to use cocoapods version 0.36 or later
 
-You can just add EVReflection to your workspace by adding the folowing 2 lines to your Podfile:
+You can just add EVReflection to your workspace by adding the following 2 lines to your Podfile:
 
 ```
 use_frameworks!
@@ -136,6 +145,11 @@ import EVReflection
 
 If you want support for older versions than iOS 8.0, then you can also just copy the files from the pod folder to your project. You do have to use the Swift2.3 version or older. iOS 7 support is dropped from Swift 3.
 
+Be aware that when you have your object definitions in a framework and not in your main app, then you have to let EVReflection know that it should also look in that framework for your classes. This can easilly be done by using the following one liner (for instance in the appdelegate)
+```
+EVReflection.setBundleIdentifier(YourDataObject.self)
+```
+ 
 
 ## More Sample code 
 Clone EVReflection to your desktop to see these and more unit tests
@@ -170,7 +184,36 @@ func testArrayFunctions() {
     let userArray = [User](dictionaryArray: dictionaryArray)
     let newDictionaryArray = userArray.toDictionaryArray()
 }
+
 ```
+
+This is how you can parse a .plist into an object model. See EVReflectionIssue124.swift to see it working.
+```
+   if let path = Bundle(for: type(of: self)).path(forResource: "EVReflectionIssue124", ofType: "plist") {
+       if let data = NSDictionary(contentsOfFile: path) {
+          let plistObject = Wrapper(dictionary: data)
+          print(plistObject)
+       }
+   }
+```
+
+If you want to parse XML, then you can use the pod [XMLDictionary](https://github.com/nicklockwood/XMLDictionary) to first parse it to a dictionary.
+```
+   let xml: String = "<data><item name=\"attrib\">itemData</item></data>"
+   if let data = NSDictionary(XMLString: xml) {
+      let xmlObject = MyObject(dictionary: data)
+      print(xmlObject)
+   }
+```
+
+## Extending existing objects:
+It is possible to extend other objects with the EVReflectable protocol instead of changing the base class to EVObject. This will let you add the power of EVReflection to objects that also need another framework. If for instance you are using Realm, you can extend all your Object classes with the power of EVReflection by only adding these lines of code:
+
+```
+import EVReflection
+extension Object : EVReflectable { }
+```
+You can do the same with NSManagedObject
 
 ## Extra information:
 
@@ -180,7 +223,7 @@ With almost any EVReflection function you can specify what kind of conversion op
 - None - Do not use any conversion function.
 - [PropertyConverter](https://github.com/evermeer/EVReflection#custom-property-converters) : If specified the function propertyConverters on the EVObject will be called
 - [PropertyMapping](https://github.com/evermeer/EVReflection#custom-keyword-mapping) : If specified the function propertyMapping on the EVObject will be called
-- [SkipPropertyValue](https://github.com/evermeer/EVReflection#skip-the-serialisaton-or-deserialisation-of-specific-values) : If specified the function skipPropertyValue on the EVObject will be called
+- [SkipPropertyValue](https://github.com/evermeer/EVReflection#skip-the-serialization-or-deserialization-of-specific-values) : If specified the function skipPropertyValue on the EVObject will be called
 - [KeyCleanup](https://github.com/evermeer/EVReflection#automatic-keyword-mapping-pascalcase-or-camelcase-to-snake_case) : If specified the automatic pascalCase and snake_case property key mapping will be called.
 
 In EVReflection all functions will use a default conversion option specific to it's function. The following 4 default conversion types are used: 
@@ -196,7 +239,8 @@ ConversionOptions.DefaultNSCoding = [.PropertyMapping]
 
 
 ### Automatic keyword mapping for Swift keywords
-If you have JSON fields that are Swift keywords, then prefix the property with an underscore. So the JSON value for self will be stored in the property _self. At this moment the folowing keywords are handled:
+If you have JSON fields that are Swift keywords, then prefix the property with an underscore. So the JSON value for self will be stored in the property `\_self`. At this moment the following keywords are handled:
+
 "self", "description", "class", "deinit", "enum", "extension", "func", "import", "init", "let", "protocol", "static", "struct", "subscript", "typealias", "var", "break", "case", "continue", "default", "do", "else", "fallthrough", "if", "in", "for", "return", "switch", "where", "while", "as", "dynamicType", "is", "new", "super", "Self", "Type", "__COLUMN__", "__FILE__", "__FUNCTION__", "__LINE__", "associativity", "didSet", "get", "infix", "inout", "left", "mutating", "none", "nonmutating", "operator", "override", "postfix", "precedence", "prefix", "right", "set", "unowned", "unowned", "safe", "unowned", "unsafe", "weak", "willSet", "private", "public"
 
 ### Automatic keyword mapping PascalCase or camelCase to snake_case
@@ -244,7 +288,7 @@ public class TestObject6: EVObject {
 }
 ```
 
-### Skip the serialisaton or deserialisation of specific values
+### Skip the serialization or deserialization of specific values
 When there is a need to not (de)serialize specific values like nil NSNull or empty strings you can implement the skipPropertyValue function and return true if the value needs to be skipped. See [Conversion options](https://github.com/evermeer/EVReflection#conversion-options) for when this function will be called.
 
 ```
@@ -298,8 +342,8 @@ public class GameUser: EVObject {
 }
 ```
 
-### Deserialisaton class level validations
-There is also support for class level validation when deserialising to an object. There are helper functions for making keys required or not allowed. You can also add custom messages. Here is some sample code about how you can implement such a validation
+### Deserialization class level validations
+There is also support for class level validation when deserializing to an object. There are helper functions for making keys required or not allowed. You can also add custom messages. Here is some sample code about how you can implement such a validation
 
 ```
 public class ValidateObject: EVObject {
@@ -332,7 +376,7 @@ func testValidation() {
 ```
 
 ### What to do when you use object enheritance
-You can deserialize json to an object that uses enheritance. When the properties are specified as the base class, then the correct specific object type will be returned by the function getSecificType. See the sample code below or the unit test in EVReflectionEnheritanceTests.swift
+You can deserialize json to an object that uses enheritance. When the properties are specified as the base class, then the correct specific object type will be returned by the function `getSpecificType`. See the sample code below or the unit test in EVReflectionEnheritanceTests.swift
 
 ```
 class Quz: EVObject {
@@ -401,7 +445,7 @@ For Swift Dictionaries (and not NSDictionary) the protocol EVDictionaryConvertab
 EVReflection is available under the MIT 3 license. See the LICENSE file for more info.
 
 ## My other libraries:
-Also see my other open source iOS libraries:
+Also see my other public source iOS libraries:
 
 - [EVReflection](https://github.com/evermeer/EVReflection) - Swift library with reflection functions with support for NSCoding, Printable, Hashable, Equatable and JSON 
 - [EVCloudKitDao](https://github.com/evermeer/EVCloudKitDao) - Simplified access to Apple's CloudKit

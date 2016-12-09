@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		360085D51D6D8B22003D7218 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D41D6D8B22003D7218 /* AuthService.swift */; };
-		360085D71D6D8D71003D7218 /* AlamofireExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D61D6D8D71003D7218 /* AlamofireExt.swift */; };
 		360085D91D6D90C9003D7218 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085D81D6D90C9003D7218 /* AppConstants.swift */; };
 		360085DD1D6ED941003D7218 /* NSDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085DC1D6ED941003D7218 /* NSDataExt.swift */; };
 		360085DF1D7428A8003D7218 /* OathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360085DE1D7428A8003D7218 /* OathDataSource.swift */; };
@@ -38,7 +37,9 @@
 		36999FB41D61AD0B00020B60 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB31D61AD0B00020B60 /* GenericDataSource.swift */; };
 		36999FB61D644A5D00020B60 /* FindFriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36999FB51D644A5D00020B60 /* FindFriendService.swift */; };
 		36F009C21D8FC699001482A1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F009C11D8FC699001482A1 /* SettingsTableViewController.swift */; };
-		7524D7ECCFF19FE7BF1EF867 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AA014F9F60E70B613448C /* Pods.framework */; };
+		486976EEAAF7F06FD62C9C5F /* Pods_OathsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0150D457A7C70B37D328B21A /* Pods_OathsUITests.framework */; };
+		A8CEAAD6D87794EA29073520 /* Pods_Oaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C27134A0FE9C113B9FE6A4 /* Pods_Oaths.framework */; };
+		E8E3DFD026A5E27B9713EE30 /* Pods_OathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E4FDF1F10CCA68D9E0876F /* Pods_OathsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C9DCA5CE3BA518D29C2D943 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0150D457A7C70B37D328B21A /* Pods_OathsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OathsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360085D41D6D8B22003D7218 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		360085D61D6D8D71003D7218 /* AlamofireExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExt.swift; sourceTree = "<group>"; };
 		360085D81D6D90C9003D7218 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		360085DC1D6ED941003D7218 /* NSDataExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExt.swift; sourceTree = "<group>"; };
 		360085DE1D7428A8003D7218 /* OathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDataSource.swift; sourceTree = "<group>"; };
@@ -98,8 +98,15 @@
 		36999FB51D644A5D00020B60 /* FindFriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendService.swift; sourceTree = "<group>"; };
 		36999FB91D6AE5EF00020B60 /* Oaths 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Oaths 3.xcdatamodel"; sourceTree = "<group>"; };
 		36F009C11D8FC699001482A1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		50D4741E93F66F8AD59F5DA8 /* Pods-OathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OathsTests/Pods-OathsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		589941452D73F4090136DA3F /* Pods-OathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OathsTests/Pods-OathsTests.release.xcconfig"; sourceTree = "<group>"; };
+		70E4FDF1F10CCA68D9E0876F /* Pods_OathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D42BC2323DE841D73AFEC5F /* Pods-OathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OathsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OathsUITests/Pods-OathsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95C27134A0FE9C113B9FE6A4 /* Pods_Oaths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Oaths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95DFE80CCA07E7310235A745 /* Pods-Oaths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oaths.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Oaths/Pods-Oaths.debug.xcconfig"; sourceTree = "<group>"; };
+		C897A130700B63B98977E1EE /* Pods-Oaths.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oaths.release.xcconfig"; path = "Pods/Target Support Files/Pods-Oaths/Pods-Oaths.release.xcconfig"; sourceTree = "<group>"; };
 		DA1AA014F9F60E70B613448C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB2E68E47B9E469BB3F5E73D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F86F338EAF73AD9D39528CA4 /* Pods-OathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OathsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OathsUITests/Pods-OathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7524D7ECCFF19FE7BF1EF867 /* Pods.framework in Frameworks */,
+				A8CEAAD6D87794EA29073520 /* Pods_Oaths.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E3DFD026A5E27B9713EE30 /* Pods_OathsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486976EEAAF7F06FD62C9C5F /* Pods_OathsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +207,6 @@
 				36999FB31D61AD0B00020B60 /* GenericDataSource.swift */,
 				361746771D5B22B40004103D /* GenericRepository.swift */,
 				361746751D5B16A00004103D /* CoreDataAccess.swift */,
-				360085D61D6D8D71003D7218 /* AlamofireExt.swift */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
@@ -210,8 +218,8 @@
 				36895EF81D0703DE000E33A5 /* OathsTests */,
 				36895F031D0703DE000E33A5 /* OathsUITests */,
 				36895EDF1D0703DE000E33A5 /* Products */,
-				F6570503887CA3F978D8625C /* Pods */,
 				93F54D566FC5CD4E4C35ADB2 /* Frameworks */,
+				C88FF9060EB02A1C1CEFE660 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,15 +282,22 @@
 			isa = PBXGroup;
 			children = (
 				DA1AA014F9F60E70B613448C /* Pods.framework */,
+				95C27134A0FE9C113B9FE6A4 /* Pods_Oaths.framework */,
+				70E4FDF1F10CCA68D9E0876F /* Pods_OathsTests.framework */,
+				0150D457A7C70B37D328B21A /* Pods_OathsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F6570503887CA3F978D8625C /* Pods */ = {
+		C88FF9060EB02A1C1CEFE660 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB2E68E47B9E469BB3F5E73D /* Pods.debug.xcconfig */,
-				1C9DCA5CE3BA518D29C2D943 /* Pods.release.xcconfig */,
+				95DFE80CCA07E7310235A745 /* Pods-Oaths.debug.xcconfig */,
+				C897A130700B63B98977E1EE /* Pods-Oaths.release.xcconfig */,
+				50D4741E93F66F8AD59F5DA8 /* Pods-OathsTests.debug.xcconfig */,
+				589941452D73F4090136DA3F /* Pods-OathsTests.release.xcconfig */,
+				F86F338EAF73AD9D39528CA4 /* Pods-OathsUITests.debug.xcconfig */,
+				8D42BC2323DE841D73AFEC5F /* Pods-OathsUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -294,12 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36895F091D0703DE000E33A5 /* Build configuration list for PBXNativeTarget "Oaths" */;
 			buildPhases = (
-				A4369B0074892CE6ED99F3A9 /* Check Pods Manifest.lock */,
+				9B5060F98E13B95A0AC8DC22 /* [CP] Check Pods Manifest.lock */,
 				36895EDA1D0703DE000E33A5 /* Sources */,
 				36895EDB1D0703DE000E33A5 /* Frameworks */,
 				36895EDC1D0703DE000E33A5 /* Resources */,
-				5E90E9F013C533DFE734FEBD /* Embed Pods Frameworks */,
-				A73FBC08FE98C52E32DC3F60 /* Copy Pods Resources */,
+				E580F6657B39F6BCF151AAB5 /* [CP] Embed Pods Frameworks */,
+				E5DBF1D3785B69C3815471CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,9 +329,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36895F0C1D0703DE000E33A5 /* Build configuration list for PBXNativeTarget "OathsTests" */;
 			buildPhases = (
+				2DFBFA7241FC58E2F619F092 /* [CP] Check Pods Manifest.lock */,
 				36895EF11D0703DE000E33A5 /* Sources */,
 				36895EF21D0703DE000E33A5 /* Frameworks */,
 				36895EF31D0703DE000E33A5 /* Resources */,
+				9B9C055F4126BF8CF2F62B6A /* [CP] Embed Pods Frameworks */,
+				23C489859CE1BED7504CE87F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,9 +350,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36895F0F1D0703DE000E33A5 /* Build configuration list for PBXNativeTarget "OathsUITests" */;
 			buildPhases = (
+				CEBCCA66232FAB530D71030A /* [CP] Check Pods Manifest.lock */,
 				36895EFC1D0703DE000E33A5 /* Sources */,
 				36895EFD1D0703DE000E33A5 /* Frameworks */,
 				36895EFE1D0703DE000E33A5 /* Resources */,
+				EAEC4DA484F073B3BD48BA2C /* [CP] Copy Pods Resources */,
+				D2A0F6D5280C42CFD0C99CAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,12 +374,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = p92;
 				TargetAttributes = {
 					36895EDD1D0703DE000E33A5 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2T7LK24WQG;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -370,10 +392,12 @@
 					};
 					36895EF41D0703DE000E33A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 36895EDD1D0703DE000E33A5;
 					};
 					36895EFF1D0703DE000E33A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 36895EDD1D0703DE000E33A5;
 					};
 				};
@@ -426,49 +450,139 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5E90E9F013C533DFE734FEBD /* Embed Pods Frameworks */ = {
+		23C489859CE1BED7504CE87F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OathsTests/Pods-OathsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4369B0074892CE6ED99F3A9 /* Check Pods Manifest.lock */ = {
+		2DFBFA7241FC58E2F619F092 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A73FBC08FE98C52E32DC3F60 /* Copy Pods Resources */ = {
+		9B5060F98E13B95A0AC8DC22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B9C055F4126BF8CF2F62B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OathsTests/Pods-OathsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEBCCA66232FAB530D71030A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A0F6D5280C42CFD0C99CAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OathsUITests/Pods-OathsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E580F6657B39F6BCF151AAB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oaths/Pods-Oaths-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5DBF1D3785B69C3815471CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oaths/Pods-Oaths-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAEC4DA484F073B3BD48BA2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OathsUITests/Pods-OathsUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,7 +611,6 @@
 				36999FAE1D619A7B00020B60 /* FriendRepository.swift in Sources */,
 				36999FB01D619F0100020B60 /* UIViewControllerExt.swift in Sources */,
 				3617467C1D5B56190004103D /* FindFriendsTableViewCell.swift in Sources */,
-				360085D71D6D8D71003D7218 /* AlamofireExt.swift in Sources */,
 				361746761D5B16A00004103D /* CoreDataAccess.swift in Sources */,
 				36895EE41D0703DE000E33A5 /* OathTableViewController.swift in Sources */,
 				36895EE21D0703DE000E33A5 /* AppDelegate.swift in Sources */,
@@ -572,8 +685,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,7 +710,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -618,8 +733,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -635,9 +752,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -645,76 +763,94 @@
 		};
 		36895F0A1D0703DE000E33A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB2E68E47B9E469BB3F5E73D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 95DFE80CCA07E7310235A745 /* Pods-Oaths.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Oaths/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.MyOaths;
 				PRODUCT_NAME = Oaths;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		36895F0B1D0703DE000E33A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9DCA5CE3BA518D29C2D943 /* Pods.release.xcconfig */;
+			baseConfigurationReference = C897A130700B63B98977E1EE /* Pods-Oaths.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Oaths/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.MyOaths;
 				PRODUCT_NAME = Oaths;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		36895F0D1D0703DE000E33A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D4741E93F66F8AD59F5DA8 /* Pods-OathsTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OathsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.p92.rwtutorial.OathsTests;
 				PRODUCT_NAME = Oaths;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oaths.app/Oaths";
 			};
 			name = Debug;
 		};
 		36895F0E1D0703DE000E33A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 589941452D73F4090136DA3F /* Pods-OathsTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OathsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.p92.rwtutorial.OathsTests;
 				PRODUCT_NAME = Oaths;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oaths.app/Oaths";
 			};
 			name = Release;
 		};
 		36895F101D0703DE000E33A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86F338EAF73AD9D39528CA4 /* Pods-OathsUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = OathsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.p92.rwtutorial.OathsUITests;
 				PRODUCT_NAME = Oaths;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Oaths;
 			};
 			name = Debug;
 		};
 		36895F111D0703DE000E33A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D42BC2323DE841D73AFEC5F /* Pods-OathsUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = OathsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.p92.rwtutorial.OathsUITests;
 				PRODUCT_NAME = Oaths;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Oaths;
 			};
 			name = Release;

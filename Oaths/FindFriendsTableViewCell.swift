@@ -14,4 +14,6 @@ class FindFriendsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var oathLabel: UILabel!
+    
 }

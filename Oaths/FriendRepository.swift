@@ -14,10 +14,10 @@ class FriendRepository: GenericRepository<Friend>{
  
     func create( fromPerson person:Person ) throws -> Friend? {
         let uniquePredicate = NSPredicate( format: "email == %@", person.email )
-        return try super.create( uniquePredicate, setProperties: { (friend) -> Void in
+        return try super.createIfNotExist( uniquePredicate, setProperties: { (friend) -> Void in
             friend.email = person.email
-            friend.firstName = person.firstName
-            friend.surName = person.surName
+            friend.firstName = person.name
+            friend.surName = person.name
         })
     }
     

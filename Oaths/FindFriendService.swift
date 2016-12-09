@@ -10,29 +10,36 @@ import Foundation
 import Alamofire
 
 
-class FindFriendsService{
+class FindFriendsService
+{
     
     let friendRepository = FriendRepository();
     
-    func loadPeople( filter filter: String,
-                     completionHandler: ([Person]) -> Void ) {
     
-        // TODO: clean code
-        Alamofire.request(.GET, K.EndpointUrls.PersonUrl ,parameters: ["filter": filter])
-            .responseJSON{ (response) -> Void in
-            
+    func getStrangers( filter: String,
+                       completionHandler: @escaping ([Person]) -> Void ) {
+    
+        
+        
+        Alamofire.request( K.EndpointUrls.PublicOaths, method: .get, parameters: ["filter": filter], encoding: JSONEncoding.default)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                
                 guard response.result.isSuccess else {
                     print("Error while fetching people from server: \(response.result.error)")
                     return
                 }
-            
-                guard let value = response.result.value as? [String: AnyObject],
-                    rows = value["people"] as? [[String:AnyObject]]else {
-                        print("Malformed people data received from server: \(response.result.value)")
-                        return
+
+                guard let peopleJson = response.result.value as? [[String: AnyObject]] else {
+                    print("Malformed people data received from server: \(response.result.value)")
+                    return
                 }
-            
-            
+               
                 let friendEmails: [String]
                 do {
                     friendEmails = try self.friendRepository.getAll().map( { $0.email! })
@@ -40,19 +47,19 @@ class FindFriendsService{
                     print("Couldn't load friends \(error), details:\(error.userInfo)")
                     return
                 }
-            
-            
+                
+                
                 var people = [Person]()
-                for personDict in rows {
-                    let person = Person(json: personDict)
-                    if friendEmails.indexOf(person.email) == nil{
+                for personJson in peopleJson {
+                    let person = Person(json: personJson)
+                    if !friendEmails.contains(person.email) {
                         people.append( person)
                     }
                 }
-            
+                
                 completionHandler( people )
-            
-        } ;
-    
+
+        }
+        
     }
 }
