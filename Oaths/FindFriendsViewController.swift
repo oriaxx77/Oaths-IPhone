@@ -94,10 +94,10 @@ class FindFriendsTableViewController: UITableViewController, UISearchResultsUpda
     func addFriendAction() -> UITableViewRowAction {
         let addFriendAction = UITableViewRowAction(style: .default, title: "Add", handler: {action, indexPath in
             self.tryExec {
-                try self.friendRepository.create( fromPerson: self.strangers[(indexPath as NSIndexPath).row])
+                let newFriend = try self.friendRepository.create( fromPerson: self.strangers[(indexPath as NSIndexPath).row])
                 self.strangers.remove(at: (indexPath as NSIndexPath).row)
                 self.tableView.deleteRows(at: [indexPath],  with: .automatic)
-                self.showToast( "Friend added" )
+                self.showToast( "Friend \(newFriend?.email) added" )
             }
         })
         return addFriendAction

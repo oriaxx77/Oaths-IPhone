@@ -1,40 +1,18 @@
 PODS:
-  - Alamofire (4.0.1)
-  - EVReflection (3.4.0)
+  - Alamofire (4.2.0)
+  - EVReflection (3.6.0)
   - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
-  - EVReflection (from `https://github.com/evermeer/EVReflection`, branch `master`)
-  - Toast-Swift (from `https://github.com/scalessec/Toast-Swift`, branch `master`)
-
-EXTERNAL SOURCES:
-  Alamofire:
-    :branch: master
-    :git: https://github.com/Alamofire/Alamofire.git
-  EVReflection:
-    :branch: master
-    :git: https://github.com/evermeer/EVReflection
-  Toast-Swift:
-    :branch: master
-    :git: https://github.com/scalessec/Toast-Swift
-
-CHECKOUT OPTIONS:
-  Alamofire:
-    :commit: 928cdae0c54957cb53a6873ec64a109bc6a1be60
-    :git: https://github.com/Alamofire/Alamofire.git
-  EVReflection:
-    :commit: 3a3bc074c3aeffce41185ac0c1e4b5b41e1a8823
-    :git: https://github.com/evermeer/EVReflection
-  Toast-Swift:
-    :commit: c1242a514b7864177f42ec67d6360faffb718649
-    :git: https://github.com/scalessec/Toast-Swift
+  - Alamofire
+  - EVReflection
+  - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  EVReflection: 17280c185ab63935300bdf46acb954cc527d5786
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  EVReflection: d4ee902f8781d2659084d0f99df00dfe48387294
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 7fb377a86429e5be85bef590a0c7364e2e86ff84
+PODFILE CHECKSUM: 10766d272cae564dacbf798cfdf5b9876e93786f
 
 COCOAPODS: 1.1.1

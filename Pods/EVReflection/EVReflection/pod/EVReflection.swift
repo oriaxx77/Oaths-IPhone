@@ -202,6 +202,7 @@ final public class EVReflection {
                 print("ERROR: Invalid json! \(error.localizedDescription)")
             }
         }
+                
         return result
     }
     
@@ -280,8 +281,8 @@ final public class EVReflection {
      
      - returns: The string representation of the object
      */
-    public class func toJsonString(_ theObject: NSObject, conversionOptions: ConversionOptions = .DefaultSerialize) -> String {
-		let data = toJsonData(theObject, conversionOptions: conversionOptions)
+    public class func toJsonString(_ theObject: NSObject, conversionOptions: ConversionOptions = .DefaultSerialize, prettyPrinted: Bool = false) -> String {
+		let data = toJsonData(theObject, conversionOptions: conversionOptions, prettyPrinted: prettyPrinted)
 		return String(data: data, encoding: .utf8) ?? ""
     }
 
@@ -293,13 +294,16 @@ final public class EVReflection {
      
      - returns: The Data representation of the object
      */
-    public class func toJsonData(_ theObject: NSObject, conversionOptions: ConversionOptions = .DefaultSerialize) -> Data {
+    public class func toJsonData(_ theObject: NSObject, conversionOptions: ConversionOptions = .DefaultSerialize, prettyPrinted: Bool = false) -> Data {
         var (dict, _) = EVReflection.toDictionary(theObject, conversionOptions: conversionOptions)
         dict = convertDictionaryForJsonSerialization(dict, theObject: theObject)
         do {
-             return try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            if prettyPrinted {
+                return try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            }
+            return try JSONSerialization.data(withJSONObject: dict, options: [])
         } catch { }
-        return Data()
+        return Data()        
     }
 
     
@@ -311,8 +315,8 @@ final public class EVReflection {
     
     - parameter theObject: The object that will be loged
     */
-    public class func logObject(_ theObject: EVReflectable) {
-        NSLog(description(theObject))
+    public class func logObject(_ theObject: EVReflectable, prettyPrinted: Bool = true) {
+        NSLog(description(theObject, prettyPrinted: prettyPrinted))
     }
     
     /**
@@ -323,9 +327,9 @@ final public class EVReflection {
      
      - returns: The string representation of the object
      */
-    public class func description(_ theObject: EVReflectable, conversionOptions: ConversionOptions = .DefaultSerialize) -> String {
+    public class func description(_ theObject: EVReflectable, conversionOptions: ConversionOptions = .DefaultSerialize, prettyPrinted: Bool = true) -> String {
         if let obj = theObject as? NSObject {
-            return "\(swiftStringFromClass(obj)) = \(theObject.toJsonString())"
+            return "\(swiftStringFromClass(obj)) = \(theObject.toJsonString(prettyPrinted: prettyPrinted))"
         }
         print("ERROR: \(String(reflecting: theObject)) should have NSObject as it's base type.")
         return "\(String(reflecting: theObject))"
@@ -641,16 +645,23 @@ final public class EVReflection {
             valueType = String(reflecting:type(of: theValue))
         } else if mi.displayStyle == .enum {
             valueType = String(reflecting:type(of: theValue))
-            if let value = theValue as? EVRawString {
-                theValue = value.rawValue as AnyObject
-            } else if let value = theValue as? EVRawInt {
-                theValue = NSNumber(value: Int32(value.rawValue) as Int32)
-            } else  if let value = theValue as? EVRaw {
+            if let value = theValue as? EVRaw {
                 theValue = value.anyRawValue
             } else if let value = theValue as? EVAssociated {
                 let (enumValue, enumType, _) = valueForAny(theValue, key: value.associated.label, anyValue: value.associated.value as Any, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
                 valueType = enumType
                 theValue = enumValue
+            } else if valueType.hasPrefix("Swift.ImplicitlyUnwrappedOptional<") { // Implicitly Unwrapped Optionals are actually fancy enums
+                var subtype: String = valueType.substring(from: (valueType.components(separatedBy: "<") [0] + "<").endIndex)
+                subtype = subtype.substring(to: subtype.characters.index(before: subtype.endIndex))
+                valueType = convertToInternalSwiftRepresentation(type: subtype)
+
+                if mi.children.count == 0 {
+                    return (NSNull(), valueType, false)
+                }
+                theValue = mi.children.first?.value ?? theValue
+                let (val, _, _) =  valueForAnyDetail(parentObject, key: key, theValue: theValue, valueType: valueType)
+                return (val, valueType, false)
             } else {
                 theValue = "\(theValue)"
             }
@@ -693,6 +704,9 @@ final public class EVReflection {
             if valueType == "Foundation.Date" {
                 return (theValue as! NSDate, "NSDate", false)
             }
+            if valueType == "Foundation.Data" {
+                return (theValue as! NSData, "NSData", false)
+            }
             let structAsDict = convertStructureToDictionary(theValue, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
             return (structAsDict, "Struct", false)
         } else {
@@ -734,40 +748,40 @@ final public class EVReflection {
             return (theValue as! NSNumber, "NSNumber", false)
         }
         if theValue is Int64 {
-            return (NSNumber(value: theValue as! Int64 as Int64), "NSNumber", false)
+            return (NSNumber(value: theValue as! Int64), "NSNumber", false)
         }
         if theValue is UInt64 {
-            return (NSNumber(value: theValue as! UInt64 as UInt64), "NSNumber", false)
+            return (NSNumber(value: theValue as! UInt64), "NSNumber", false)
         }
         if theValue is Int32 {
-            return (NSNumber(value: theValue as! Int32 as Int32), "NSNumber", false)
+            return (NSNumber(value: theValue as! Int32), "NSNumber", false)
         }
         if theValue is UInt32 {
-            return (NSNumber(value: theValue as! UInt32 as UInt32), "NSNumber", false)
+            return (NSNumber(value: theValue as! UInt32), "NSNumber", false)
         }
         if theValue is Int16 {
-            return (NSNumber(value: theValue as! Int16 as Int16), "NSNumber", false)
+            return (NSNumber(value: theValue as! Int16), "NSNumber", false)
         }
         if theValue is UInt16 {
-            return (NSNumber(value: theValue as! UInt16 as UInt16), "NSNumber", false)
+            return (NSNumber(value: theValue as! UInt16), "NSNumber", false)
         }
         if theValue is Int8 {
-            return (NSNumber(value: theValue as! Int8 as Int8), "NSNumber", false)
+            return (NSNumber(value: theValue as! Int8), "NSNumber", false)
         }
         if theValue is UInt8 {
-            return (NSNumber(value: theValue as! UInt8 as UInt8), "NSNumber", false)
+            return (NSNumber(value: theValue as! UInt8), "NSNumber", false)
         }
         if theValue is NSString {
             return (theValue as! NSString, "NSString", false)
         }
         if theValue is Date {
-            return (theValue as! Date as AnyObject, "NSDate", false)
+            return (theValue as AnyObject, "NSDate", false)
         }
         if theValue is UUID {
             return ((theValue as! UUID).uuidString as AnyObject, "NSString", false)
         }
         if theValue is Array<Any> {
-            return ((theValue as! Array<Any>) as AnyObject, valueType, false)
+            return (theValue as AnyObject, valueType, false)
         }
         if theValue is EVReflectable && theValue is NSObject {
             if valueType.contains("<") {
@@ -852,6 +866,8 @@ final public class EVReflection {
                 }                
                 value = date as AnyObject
             }
+        } else if typeInObject == "AnyObject" {
+            
         }
         
         if !(value is NSArray)  && (typeInObject ?? "").contains("Swift.Array") {
@@ -1084,11 +1100,11 @@ final public class EVReflection {
                 }
             } else if let _ = type.range(of: "_NativeDictionaryStorageOwner"), let dict = dictValue as? NSDictionary, let org = anyObject as? EVReflectable {
                 dictValue = org.convertDictionary(key, dict: dict)
-            } else if type != "NSDictionary" && dictValue as? NSDictionary != nil { //TODO this too? && original is NSObject
+            } else if type != "NSDictionary" && type != "__NSDictionary0" && type != "AnyObject" && dictValue as? NSDictionary != nil { //TODO this too? && original is NSObject
                 let (dict, isValid) = dictToObject(type, original: original as? NSObject, dict: dictValue as? NSDictionary ?? NSDictionary(), conversionOptions: conversionOptions)
                 dictValue = dict ?? dictValue
                 valid = isValid
-            } else if type.range(of: "<NSDictionary>") == nil && dictValue as? [NSDictionary] != nil {
+            } else if type.range(of: "<NSDictionary>") == nil && type.range(of: "<AnyObject>") == nil && dictValue as? [NSDictionary] != nil {
                 // Array of objects
                 dictValue = dictArrayToObjectArray(anyObject, key: key, type: type, array: dictValue as? [NSDictionary] as NSArray? ?? [NSDictionary]() as NSArray, conversionOptions: conversionOptions) as NSArray
             } else if dictValue is String && original is NSObject && original is EVReflectable {
@@ -1378,6 +1394,8 @@ final public class EVReflection {
             return tempArray
         case let date as Date:
             return (getDateFormatter().string(from: date) as AnyObject? ?? "" as AnyObject)
+        case let reflectable as EVReflectable:
+            return convertDictionaryForJsonSerialization(reflectable.toDictionary(), theObject: theObject)
         case let ok as NSDictionary:
             return convertDictionaryForJsonSerialization(ok, theObject: theObject)
         default:
@@ -1387,7 +1405,6 @@ final public class EVReflection {
         }
     }
 }
-
 
 
 /**

@@ -9,7 +9,7 @@
 public struct K {
     public struct EndpointUrls {
         static let BaseUrl = "http://127.0.0.1:8080"
-        static let AuthUrl = BaseUrl + "/auth"
+        static let AuthByEmail = BaseUrl + "/authByEmail"
         static let RegisterDeviceTokenUrl = BaseUrl + "/registerPushNotificationDeviceToken"
         static let PublicOaths = BaseUrl + "/oaths/allbutmine"
     }

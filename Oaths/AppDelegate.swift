@@ -8,9 +8,12 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import CoreFoundation
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -18,22 +21,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Push notifiction registration
-        // TODO: move this to a class
-        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
-        let pushNotificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
-        application.registerUserNotificationSettings(pushNotificationSettings)
-        application.registerForRemoteNotifications()
-        
-        
+        resigsterForPushNotification( application )
+        startBackgroundDataSynching( application )
         return true
     }
 
+    // MARK: background data synchronization
+    private func startBackgroundDataSynching(_ application: UIApplication ) {
+    
+        
+        print( "-- background synching started --" )
+        
+        
+        authService.auth( email: "istvan.bagyura@gmail.com",  completionHandler: {(authToken) -> Void in
+            print("AUTH TOKEN= \(authToken)")
+          
+            
+        })
+        
+        // TODO implement this in an AsyncTask class
+        let _ = Timer.scheduledTimer( timeInterval: 1, target:self, selector: #selector(AppDelegate.synchronizeFriendsData), userInfo: nil, repeats: true)
+        
+    }
+    
+    func synchronizeFriendsData(){
+        print( "sync invoked" )
+    }
+    
     // MARK: Push notification
     
+    private func resigsterForPushNotification(_ application: UIApplication ){
+        let userNotificationCenter = UNUserNotificationCenter.current()
+        userNotificationCenter.delegate = self
+        userNotificationCenter.requestAuthorization(options: [.sound,.alert,.badge]) { (granted, error) in
+            // Enable or disable features based on authorization
+        }
+        application.registerForRemoteNotifications()
+    }
+    
+    
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        // TODO Move it to a class.
+        
+        /*
+         let chars = UnsafePointer<CChar>((deviceToken as NSData).bytes)
+         var token = ""
+         
+         for i in 0..<deviceToken.count {
+         token += String(format: "%02.2hhx", arguments: [chars[i]])
+         }
+         
+         print("Registration succeeded!")
+         print("Token: ", token)
+ */
+        
         let deviceTokenString = deviceToken.hexString()
         
         // TODO: remove constant email address
@@ -51,8 +92,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(error)
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        print(userInfo)
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,  willPresent notification: UNNotification, withCompletionHandler   completionHandler: @escaping (_ options:   UNNotificationPresentationOptions) -> Void) {
+        print("Handle push from foreground")
+        // custom code to handle push while app is in the foreground
+        print("\(notification.request.content.userInfo)")
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Handle push from background or closed")
+        // if you set a member variable in didReceiveRemoteNotification, you  will know if this is from closed or background
+        print("\(response.notification.request.content.userInfo)")
     }
     
     
